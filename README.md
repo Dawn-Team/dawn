@@ -1,5 +1,5 @@
 # dawn #
-## Contributor (Without order) ##
+## Contributors (Without order) ##
 - [Arvin Sichuan](https://github.com/ArvinSiChuan)
 - [Ash Morgan](https://github.com/Ash-Morgan)
 
