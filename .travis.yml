@@ -1,3 +1,4 @@
 language: java
+install: cd PancakeofMountHuang/PHM/ && mvn install -DskipTests=true -Dmaven.javadoc.skip=true
 jdk:
   - oraclejdk8
