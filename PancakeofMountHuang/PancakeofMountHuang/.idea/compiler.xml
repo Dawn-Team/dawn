@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="PancakeofMountHuang" />
+        <module name="pmh" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="9">
-      <module name="PancakeofMountHuang" target="1.8" />
+      <module name="pmh" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

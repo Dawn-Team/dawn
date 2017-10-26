@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--
+  ~ Copyright (c) 2017.  ArvinSiChuan.com. All Right Reserved.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+    <link rel="icon" href="/img/logo.png" sizes="192x192"/>
+    <link rel="stylesheet" th:href="@{/css/primer/primer-markdown.css}" href="/css/primer/primer-markdown.css"/>
+    <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}" href="/css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap-theme.min.css}"
+          href="/css/bootstrap/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" th:href="@{/css/bootstrap/carousel.css}" href="/css/bootstrap/carousel.css"/>
+    <!--/*@thymesVar id="web_name" type="java.lang.String"*/-->
+    <title th:text="${web_name}"></title>
+</head>
+
+<body style="background: whitesmoke">
+<!--modal templates-->
+<div id="modalDiaglog" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <a href="#" style="margin-top: 1em;margin-right: 0.6em;font-size: x-large;color: red" class="pull-right"
+               data-dismiss="modal">
+                <span class="glyphicon glyphicon-remove-sign" aria-label="Close"></span>
+            </a>
+            <div class="modal-header" purpose="placeholder" style="margin-top: 0.5em;">
+                <span style="font-size: x-large;font-weight: bold;">加载中...</span>
+            </div>
+            <div class="modal-body">
+                <div class="row" purpose="placeholder">
+                    <div class="col-sm-12"><span style="text-align: center;font-size: xx-large;">加载中...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" purpose="placeholder" hidden="hidden">
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header" style="margin-top: 0.5em">
+            <a class="navbar-brand" href="./">
+                <img class="img-rounded" src="/img/logo.png" style="height: 4em; margin-top: -1.4em;" alt="Brand"/>
+            </a>
+            <a class="navbar-brand" href="./" style="font-size: x-large">
+                <ruby th:inline="text">
+                    [[${web_name}]]
+                    <!--/*@thymesVar id="web_name_translation" type="java.lang.String"*/-->
+                    <rt th:text="${web_name_translation}"></rt>
+                </ruby>
+            </a>
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_menus"
+                    aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!--navbar-header-->
+        <div class="collapse navbar-collapse pull-right" id="nav_menus">
+            <ul class="nav navbar-nav" style="font-size: large;">
+                <span id="isFullyAuth" sec:authorize="isFullyAuthenticated()" th:text="fullyAuthenticated"
+                      hidden="hidden"></span>
+                <!--/*@thymesVar id="userSignUpEnabled" type="java.lang.String"*/-->
+                <li th:if="${userSignUpEnabled}" sec:authorize="hasRole('ROLE_ANONYMOUS')">
+                    <a href="#" id="userSignUp">Sign up</a>
+                </li>
+                <li sec:authorize="hasRole('ROLE_ANONYMOUS')">
+                    <a href="#" id="userLogIn">Login</a>
+                </li>
+                <li class="dropdown pull-right" sec:authorize="hasRole('ROLE_USER')">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size: x-large">
+                        <span class="glyphicon glyphicon-user"></span> &nbsp;<span
+                            sec:authentication="principal.username"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#" class="button">Profile</a>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li>
+                            <a href="#" class="button" id="logout">Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--collapse-->
+    </div>
+    <!--container-fluid-->
+</nav>
+
+<div class="container" style="margin-top: 8em">
+    <section class="content-wrap">
+        <div class="col-md-3 col-sm-12" style="margin-bottom: 1em">
+            <div class="row">
+                <div class="col-sm-12" style="padding: 0;">
+                    <div id="info_col" class="panel panel-default">
+                        <div class="panel-heading" style="background: white"><h1>TOPICS</h1></div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">No topics set</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <a id="newArticle" href="#" data-toggle="popover" sec:authorize="hasRole('ROLE_USER')">
+                    <span class="glyphicon glyphicon-plus-sign" style="font-size: 2em;color: black"></span>
+                </a>
+            </div>
+        </div>
+
+        <div id="main_col" class="col-md-9 col-sm-12 ">
+
+            <div></div>
+
+
+        </div>
+
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <span class="glyphicon glyphicon-copyright-mark"></span>
+                    <!--/*@thymesVar id="copyright_years" type="java.lang.String"*/-->
+                    <!--/*@thymesVar id="copyright_entity" type="java.lang.String"*/-->
+                    <span th:text="'Copyright '+ ${copyright_years}+' '+${copyright_entity}">Copyright 2017</span></div>
+                <div class="col-sm-12">
+                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    <!--/*@thymesVar id="mail_url" type="java.lang.String"*/-->
+                    <a th:href="'mailto:'+${mail_url}" th:text="${mail_url}">demo@mail.arvinsichuan.com</a></div>
+                <div class="col-sm-12">
+                    <svg aria-hidden="true" height="15" width="15">
+                        <path fill-rule="evenodd"
+                              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+                    <!--/*@thymesVar id="github_repository_name" type="java.lang.String"*/-->
+                    <!--/*@thymesVar id="github_repository_url" type="java.lang.String"*/-->
+                    <a th:href="${github_repository_url}" th:text="${github_repository_name}"></a>
+                </div>
+                <div class="col-sm-12">
+                    <!--/*@thymesVar id="icp_url" type="java.lang.String"*/-->
+                    <!--/*@thymesVar id="icp_name" type="java.lang.String"*/-->
+                    <a th:href="${icp_url}" th:text="${icp_name}">蜀ICP备15000791号</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+<script type="text/javascript" th:src="@{/js/jquery/jquery-3.1.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/jquery/jquery-ui.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap/bootstrap.min.js}"></script>
+<script type="module" th:src="@{/js/theWhiteSail/theWhiteSail.js}"></script>
+
+</html>
