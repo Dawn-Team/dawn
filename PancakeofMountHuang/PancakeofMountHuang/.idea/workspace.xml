@@ -4,33 +4,7 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ddd20f1-68f4-4201-8783-e000aa07d522" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/IndexViewController.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/IndexViewController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/PmhApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/PmhApplication.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/general/DbGeneral.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/DbGeneral.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/general/WebTransmissionInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/WebTransmissionInfo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/general/configuration/MethodSecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/configuration/MethodSecurityConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/general/configuration/SecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/configuration/SecurityConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/controller/ArticlesController.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/controller/ArticlesController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/entity/Article.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/entity/Article.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/entity/ArticleStatus.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/entity/ArticleStatus.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/entity/Topic.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/entity/Topic.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/repository/ArticlesRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/repository/ArticlesRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/repository/TopicsRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/repository/TopicsRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/service/ArticleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/service/ArticleService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/auth/LogStatusController.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/auth/LogStatusController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/auth/SecurityInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/auth/SecurityInfo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/editor/controller/EditorController.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/editor/controller/EditorController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/controller/UserController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/entity/AuthoritiesEnum.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/entity/AuthoritiesEnum.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/entity/Authority.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/entity/Authority.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/entity/AuthorityKey.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/entity/AuthorityKey.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/entity/User.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/repository/AuthoritiesRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/repository/AuthoritiesRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/repository/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/repository/UserRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="3ddd20f1-68f4-4201-8783-e000aa07d522" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,8 +51,8 @@
       <file leaf-file-name="PmhApplicationTests.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/arvinsichuan/dawn/pmh/PmhApplicationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
                 <element signature="e#0#1239#0" expanded="true" />
               </folding>
@@ -500,7 +474,7 @@
       <option name="presentableId" value="Default" />
       <updated>1508985463884</updated>
       <workItem from="1508985466840" duration="4138000" />
-      <workItem from="1508992373295" duration="3937000" />
+      <workItem from="1508992373295" duration="4284000" />
     </task>
     <task id="LOCAL-00001" summary="alter test file">
       <created>1508996165606</created>
@@ -518,7 +492,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8075000" />
+    <option name="totallyTimeSpent" value="8422000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
@@ -1019,8 +993,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/arvinsichuan/dawn/pmh/PmhApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
             <element signature="e#0#1239#0" expanded="true" />
           </folding>
