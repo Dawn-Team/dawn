@@ -1,6 +1,8 @@
 language: java
-install: cd PancakeofMountHuang/PancakeofMountHuang/ && chmod +x ./mvnw && mvn install -DskipTests=true -Dmaven.javadoc.skip=true
-
+install: mvn install -DskipTests=true -Dmaven.javadoc.skip=true
+before_install:
+  cd PancakeofMountHuang/PancakeofMountHuang/
+  chmod +x ./mvnw 
 jdk:
   - oraclejdk8
 notifications:
