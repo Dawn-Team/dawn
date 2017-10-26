@@ -4,7 +4,33 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ddd20f1-68f4-4201-8783-e000aa07d522" name="Default" comment="" />
+    <list default="true" id="3ddd20f1-68f4-4201-8783-e000aa07d522" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/IndexViewController.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/IndexViewController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/PmhApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/PmhApplication.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/general/DbGeneral.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/DbGeneral.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/general/WebTransmissionInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/WebTransmissionInfo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/general/configuration/MethodSecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/configuration/MethodSecurityConfig.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/general/configuration/SecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/configuration/SecurityConfig.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/controller/ArticlesController.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/controller/ArticlesController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/entity/Article.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/entity/Article.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/entity/ArticleStatus.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/entity/ArticleStatus.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/entity/Topic.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/entity/Topic.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/repository/ArticlesRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/repository/ArticlesRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/repository/TopicsRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/repository/TopicsRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/service/ArticleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/service/ArticleService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/auth/LogStatusController.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/auth/LogStatusController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/auth/SecurityInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/auth/SecurityInfo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/editor/controller/EditorController.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/editor/controller/EditorController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/controller/UserController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/entity/AuthoritiesEnum.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/entity/AuthoritiesEnum.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/entity/Authority.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/entity/Authority.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/entity/AuthorityKey.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/entity/AuthorityKey.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/entity/User.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/repository/AuthoritiesRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/repository/AuthoritiesRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/repository/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/repository/UserRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,7 +43,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="PmhApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/PmhApplication.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/PmhApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
@@ -29,10 +55,10 @@
         </entry>
       </file>
       <file leaf-file-name="SecurityConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/general/configuration/SecurityConfig.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/configuration/SecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
-              <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+              <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -41,25 +67,27 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1860">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="-1846">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pmh-effective-pom.xml" pinned="false" current-in-tab="true">
-        <entry file="mock:///pmh-effective-pom.xml">
+      <file leaf-file-name="PmhApplicationTests.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/arvinsichuan/dawn/pmh/PmhApplicationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="280" column="36" lean-forward="false" selection-start-line="280" selection-start-column="32" selection-end-line="280" selection-end-column="36" />
-              <folding />
+            <state relative-caret-position="301">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#1239#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MethodSecurityConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/general/configuration/MethodSecurityConfig.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/configuration/MethodSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="380">
               <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
@@ -120,7 +148,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/service/ArticleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/IndexViewController.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/arvinsichuan/dawn/pmh/PmhApplicationTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/PmhApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/PmhApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/general/WebTransmissionInfo.java" />
@@ -130,6 +157,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/EnableMethodSecurity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/general/configuration/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/arvinsichuan/dawn/pmh/PmhApplicationTests.java" />
       </list>
     </option>
   </component>
@@ -228,6 +256,53 @@
               <item name="PancakeofMountHuang" type="b2602c69:ProjectViewProjectNode" />
               <item name="PancakeofMountHuang" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PancakeofMountHuang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PancakeofMountHuang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PancakeofMountHuang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PancakeofMountHuang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PancakeofMountHuang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PancakeofMountHuang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PancakeofMountHuang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PancakeofMountHuang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="arvinsichuan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PancakeofMountHuang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PancakeofMountHuang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PancakeofMountHuang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PancakeofMountHuang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PancakeofMountHuang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PancakeofMountHuang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pmh" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -253,8 +328,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.arvinsichuan.dawn" />
       <recent name="com.arvinsichuan" />
+      <recent name="com.arvinsichuan.dawn" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\75744\IntelliJIDEAProjects\pmh\src\main\java\com\arvinsichuan\dawn" />
@@ -277,15 +352,40 @@
     <configuration name="PmhApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.arvinsichuan.dawn.thewhitesail.*" />
+          <option name="PATTERN" value="com.arvinsichuan.thewhitesail.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.arvinsichuan.dawn.PmhApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.arvinsichuan.PmhApplication" />
       <option name="SHOW_IN_DASHBOARD" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <module name="pmh" />
       <envs />
+    </configuration>
+    <configuration name="PmhApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.arvinsichuan.dawn.pmh.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="pmh" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.arvinsichuan.dawn.pmh" />
+      <option name="MAIN_CLASS_NAME" value="com.arvinsichuan.dawn.pmh.PmhApplicationTests" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
@@ -374,6 +474,15 @@
       <properties />
       <listeners />
     </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Spring Boot.PmhApplication" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.PmhApplicationTests" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.PmhApplicationTests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
     <option name="externalProjectsViewState">
@@ -391,12 +500,25 @@
       <option name="presentableId" value="Default" />
       <updated>1508985463884</updated>
       <workItem from="1508985466840" duration="4138000" />
-      <workItem from="1508992373295" duration="2559000" />
+      <workItem from="1508992373295" duration="3937000" />
     </task>
+    <task id="LOCAL-00001" summary="alter test file">
+      <created>1508996165606</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1508996165606</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="PmhApplicationTests - 2017.10.26 at 13h 39m 41s.xml">
+      <configuration name="PmhApplicationTests" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6697000" />
+    <option name="totallyTimeSpent" value="8075000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
@@ -404,13 +526,14 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891247" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891247" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32955405" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891247" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -430,7 +553,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -472,12 +594,16 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="alter test file" />
+    <option name="LAST_COMMIT_MESSAGE" value="alter test file" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/PmhApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/PmhApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
@@ -487,7 +613,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/general/configuration/SecurityConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/configuration/SecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
@@ -495,7 +621,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/general/configuration/MethodSecurityConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/configuration/MethodSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
@@ -553,143 +679,155 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/entity/ArticleStatus.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/entity/ArticleStatus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="18" column="38" lean-forward="false" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/repository/ArticlesRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/repository/ArticlesRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="27" column="23" lean-forward="true" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/entity/AuthoritiesEnum.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/entity/AuthoritiesEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="18" column="49" lean-forward="true" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/entity/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-877">
           <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/entity/AuthorityKey.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/entity/AuthorityKey.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/entity/Authority.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/entity/Authority.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="37" column="9" lean-forward="false" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/editor/controller/EditorController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/editor/controller/EditorController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/auth/SecurityInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/auth/SecurityInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
           <caret line="56" column="28" lean-forward="false" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/auth/LogStatusController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/auth/LogStatusController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="45" column="29" lean-forward="false" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/entity/Article.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/entity/Article.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="109" column="0" lean-forward="true" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/repository/UserRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/repository/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="34" column="69" lean-forward="false" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/repository/AuthoritiesRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/repository/AuthoritiesRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/service/UserService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/entity/Topic.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/entity/Topic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/repository/TopicsRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/repository/TopicsRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/service/ArticleService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/service/ArticleService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
           <caret line="47" column="4" lean-forward="false" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/articles/controller/ArticlesController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/controller/ArticlesController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/arvinsichuan/dawn/pmh/PmhApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/IndexViewController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/IndexViewController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="38" column="13" lean-forward="false" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -697,10 +835,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="836">
           <caret line="44" column="33" lean-forward="true" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/PmhApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/PmhApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
@@ -710,21 +849,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/general/WebTransmissionInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/WebTransmissionInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/general/DbGeneral.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/DbGeneral.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
           <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/general/configuration/MethodSecurityConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/configuration/MethodSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
@@ -734,10 +875,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/general/configuration/SecurityConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/configuration/SecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
-          <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+          <caret line="43" column="13" lean-forward="false" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -862,9 +1003,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1860">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="-1846">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.3.12.RELEASE/spring-test-4.3.12.RELEASE.jar!/org/springframework/test/context/junit4/SpringRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/arvinsichuan/dawn/pmh/PmhApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#1239#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
