@@ -23,7 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="_csrf" th:content="${_csrf.token}"/>
     <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
-    <link rel="icon" href="/img/logo.png" sizes="192x192"/>
+    <link rel="icon" th:href="@{${icon_path}}" href="/img/logo.png" sizes="192x192"/>
     <link rel="stylesheet" th:href="@{/css/primer/primer-markdown.css}" href="/css/primer/primer-markdown.css"/>
     <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}" href="/css/bootstrap/bootstrap.min.css"/>
     <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap-theme.min.css}"
@@ -60,7 +60,8 @@
     <div class="container-fluid">
         <div class="navbar-header" style="margin-top: 0.5em">
             <a class="navbar-brand" href="./">
-                <img class="img-rounded" src="/img/logo.png" style="height: 4em; margin-top: -1.4em;" alt="Brand"/>
+                <!--/*@thymesVar id="icon_path" type="java.lang.String"*/-->
+                <img class="img-rounded"  th:src="@{${icon_path}}" src="/img/logo.png" style="height: 2.5em; margin-top: -1.4em;" alt="Brand"/>
             </a>
             <a class="navbar-brand" href="./" style="font-size: x-large">
                 <ruby th:inline="text">
@@ -118,9 +119,11 @@
             <div class="row">
                 <div class="col-sm-12" style="padding: 0;">
                     <div id="info_col" class="panel panel-default">
-                        <div class="panel-heading" style="background: white"><h1>TOPICS</h1></div>
+                        <div class="panel-heading" style="background: white">
+                            <!--/*@thymesVar id="side_panel_name" type="java.lang.String"*/-->
+                        <h1 th:text="${side_panel_name}">Panel Name</h1></div>
                         <div class="list-group">
-                            <a href="#" class="list-group-item">No topics set</a>
+                            <a href="#" class="list-group-item">Nothing</a>
                         </div>
                     </div>
                 </div>
@@ -175,6 +178,7 @@
 <script type="text/javascript" th:src="@{/js/jquery/jquery-3.1.1.min.js}"></script>
 <script type="text/javascript" th:src="@{/js/jquery/jquery-ui.min.js}"></script>
 <script type="text/javascript" th:src="@{/js/bootstrap/bootstrap.min.js}"></script>
-<script type="module" th:src="@{/js/theWhiteSail/theWhiteSail.js}"></script>
+<!--/*@thymesVar id="main_module" type="java.lang.String"*/-->
+<script type="module" th:src="@{${main_module}}"></script>
 
 </html>

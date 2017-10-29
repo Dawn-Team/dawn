@@ -51,7 +51,10 @@ public class IndexViewController {
     }
 
     private void setDefaultModel(Model model) {
+        model.addAttribute("main_module","/js/dawn/pmh/pmh.js");
+        model.addAttribute("icon_path","/img/Dawn-low_resolution.png");
         model.addAttribute("web_name", "Dawn");
+        model.addAttribute("side_panel_name","Project List");
         model.addAttribute("copyright_years", LocalDate.now().getYear());
         model.addAttribute("copyright_entity","Dawn Team");
         model.addAttribute("mail_url", "service@mail.arvinsichuan.com");
