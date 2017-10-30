@@ -23,6 +23,7 @@ const SIGN_UP_FORM_TEMPLATE_CONTENT =
     '<form class="col-sm-12" id="sign_up_form">' +
     '   <div class="form-group">' +
     '       <input class="form-control"  type="text" required="required" name="username" placeholder="User name" purpose="autoFocus"/>' +
+    '       <span></span>' +
     '   </div>' +
     '   <div class="form-group">' +
     '       <input class="form-control"  type="password" required="required" name="password" placeholder="Password"/>' +
@@ -81,7 +82,7 @@ export default class SignUp {
     _onSubmitSuccess(info) {
         let footer = ModalTool.getFooterObject();
         let body = ModalTool.getBodyObject();
-        if (info.code == 0) {
+        if (info.code === 0) {
             footer.find("span").removeClass("text-muted text-danger text-warning text-primary text-info");
             footer.find("span").html('Sign up <br />Successful!');
             footer.find("span").addClass("text-success");
@@ -91,10 +92,16 @@ export default class SignUp {
             footer.find("input[type='button']").click(function () {
                 ModalTool.show('hide');
                 new Login().onLogin();
-                body.find("input[name='username']").val(info.full.user.username)
+                body.find("input[name='username']").val(info.full.user.username);
+                body.find("input[name='password']").focus();
             });
         } else {
-            console.log(info)
+            footer.find("input").removeAttr("disabled");
+            footer.find("span").text('Sign up Failed!');
+            footer.find("span").removeClass("text-muted text-info text-warning text-primary text-success");
+            footer.find("span").addClass("text-danger");
+            body.find(".form-group:first").addClass("has-error");
+            body.find(".form-group:first").children("span").replaceWith("<span class='help-block'>User Already Exists.</span>")
         }
     }
 

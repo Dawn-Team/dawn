@@ -20,12 +20,14 @@ package com.arvinsichuan.thewhitesail.users.service;
 
 
 import com.arvinsichuan.general.WebInfoEntity;
+import com.arvinsichuan.general.exceptions.DuplicatedDataException;
 import com.arvinsichuan.thewhitesail.users.entity.AuthoritiesEnum;
 import com.arvinsichuan.thewhitesail.users.entity.Authority;
 import com.arvinsichuan.thewhitesail.users.entity.User;
 import com.arvinsichuan.thewhitesail.users.repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -49,32 +51,33 @@ public class UserService {
     @Resource(name = "passEncoder")
     private BCryptPasswordEncoder passwordEncoder;
 
-    public WebInfoEntity userSignUp(String username, String password) {
+    @Transactional(rollbackFor = DuplicatedDataException.class)
+    public WebInfoEntity userSignUp(String username, String password) throws DuplicatedDataException{
         WebInfoEntity webInfo = new WebInfoEntity();
-
-        // process username to lowercase
-        username = username.toLowerCase();
-
-        // Encode passwords
-        password = passwordEncoder.encode(password);
-
-        User user = new User();
-        user.setUsername(username);
-        user.setPassword(password);
-        user.setEnabled(true);
-
-        Authority authority = new Authority();
-        authority.setUserByUsername(user);
-        authority.setAuthority(AuthoritiesEnum.ROLE_USER);
-        List<Authority> authorities = new ArrayList<>();
-        authorities.add(authority);
-        user.setAuthorities(authorities);
-
         User userInDB = userRepository.findOne(username);
         if (userInDB != null && userInDB.getUsername().equals(username)) {
-            webInfo.haveException(new Exception("User Already Exists."));
-            webInfo.duplicatedData();
+           throw new DuplicatedDataException("User.username value: "+username);
         } else {
+//          Process username to lowercase
+            username = username.toLowerCase();
+
+//          Encode passwords
+            password = passwordEncoder.encode(password);
+
+//          Build an user instance
+            User user = new User();
+            user.setUsername(username);
+            user.setPassword(password);
+            user.setEnabled(true);
+
+//          Assign Authorities
+            Authority authority = new Authority();
+            authority.setUserByUsername(user);
+            authority.setAuthority(AuthoritiesEnum.ROLE_USER);
+            List<Authority> authorities = new ArrayList<>();
+            authorities.add(authority);
+            user.setAuthorities(authorities);
+
             try {
                 userRepository.save(user);
                 user.setPassword("[PROTECTED]");
