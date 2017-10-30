@@ -18,11 +18,13 @@
 
 package com.arvinsichuan.thewhitesail.editor.controller;
 
+import com.arvinsichuan.general.WebInfoEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.Serializable;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -41,13 +43,12 @@ public class EditorController {
 
     @RequestMapping(value = "/token",method = RequestMethod.POST)
     @PreAuthorize("hasRole('ROLE_USER')")
-    public Iterable getGitHubAPIToken(){
-        Map<String,String> webEntity=new TreeMap<>();
-        webEntity.put("Status","OK");
-        webEntity.put("Status-Code","200");
+    public Serializable getGitHubAPIToken(){
+        WebInfoEntity webInfoEntity=new WebInfoEntity();
+        webInfoEntity.isOK();
         // TODO hard code to eliminate.
-        webEntity.put("Authorization","token 5aa8fddbb4f017835bc1042814d7d18d2a4e7829");
-        return webEntity.entrySet();
+        webInfoEntity.addInfoAndData("Authorization","token 5aa8fddbb4f017835bc1042814d7d18d2a4e7829");
+        return webInfoEntity;
     }
 
 }

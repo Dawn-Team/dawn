@@ -16,23 +16,22 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.arvinsichuan.thewhitesail.articles.repository;
-
-
-import com.arvinsichuan.thewhitesail.articles.entity.Topic;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+package com.arvinsichuan.general.exceptions;
 
 /**
- * Project theWhiteSail
+ * Project PancakeofMountHuang
  * <p>
  * Author: arvinsc@foxmail.com
  * <p>
- * Date: 2017/10/7
+ * Date: 30-Oct-17
  * <p>
- * Package: com.arvinsichuan.thewhitesail.articles.repository
+ * Package: com.arvinsichuan.general.exceptions
  * @author ArvinSiChuan
  */
-@Repository("topicsRepository")
-public interface TopicsRepository extends CrudRepository<Topic,String> {
+public class DuplicatedDataException extends Exception{
+    private static final long serialVersionUID = -9173887517681465038L;
+
+    public DuplicatedDataException(String message){
+        super(message);
+    }
 }

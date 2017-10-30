@@ -37,6 +37,7 @@ import java.util.stream.Collectors;
  * Date: 2017/10/1
  * <p>
  * Package: com.arvinsichuan.auth
+ * @author ArvinSiChuan
  */
 public class SecurityInfo {
 

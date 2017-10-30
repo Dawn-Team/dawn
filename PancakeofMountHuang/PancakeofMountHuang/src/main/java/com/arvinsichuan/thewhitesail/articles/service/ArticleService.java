@@ -34,6 +34,7 @@ import javax.annotation.Resource;
  * Date: 2017/10/8
  * <p>
  * Package: com.arvinsichuan.thewhitesail.articles.service
+ * @author ArvinSiChuan
  */
 @Service("articleService")
 public class ArticleService {

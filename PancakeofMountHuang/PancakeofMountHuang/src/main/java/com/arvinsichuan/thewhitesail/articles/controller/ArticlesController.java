@@ -18,7 +18,7 @@
 
 package com.arvinsichuan.thewhitesail.articles.controller;
 
-import com.arvinsichuan.general.WebTransmissionInfo;
+import com.arvinsichuan.general.WebInfoEntity;
 import com.arvinsichuan.thewhitesail.articles.entity.Article;
 import com.arvinsichuan.thewhitesail.articles.service.ArticleService;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -40,6 +40,7 @@ import java.util.List;
  * Date: 2017/10/8
  * <p>
  * Package: com.arvinsichuan.thewhitesail.articles.controller
+ * @author ArvinSiChuan
  */
 @RestController
 @RequestMapping("/articles")
@@ -50,22 +51,21 @@ public class ArticlesController {
 
     @RequestMapping(path = "/new", method = RequestMethod.PUT)
     @PreAuthorize("hasRole('ROLE_USER')")
-    public WebTransmissionInfo saveArticle(String articleTitle, String articleText) {
-        WebTransmissionInfo info = new WebTransmissionInfo();
+    public WebInfoEntity saveArticle(String articleTitle, String articleText) {
+        WebInfoEntity info = new WebInfoEntity();
         Article article=new Article();
         article.setArticleTitle(articleTitle);
         article.setArticleText(articleText);
         boolean savingFlag= articleService.saveNewArticle(article);
         if (savingFlag){
-            info.ok();
-        }
+            info.isOK();        }
         return info;
     }
 
     @RequestMapping(path = "/{article_uuid}", method = RequestMethod.POST)
     @PreAuthorize("hasRole('ROLE_USER')")
-    public WebTransmissionInfo updateArticle(@PathVariable("article_uuid") String article_uuid, Article article) {
-        WebTransmissionInfo info = new WebTransmissionInfo();
+    public WebInfoEntity updateArticle(@PathVariable("article_uuid") String article_uuid, Article article) {
+        WebInfoEntity info = new WebInfoEntity();
         return info;
     }
 

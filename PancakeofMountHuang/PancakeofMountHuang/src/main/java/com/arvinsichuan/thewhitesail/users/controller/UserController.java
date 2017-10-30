@@ -20,7 +20,6 @@ package com.arvinsichuan.thewhitesail.users.controller;
 
 
 
-import com.arvinsichuan.general.WebTransmissionInfo;
 import com.arvinsichuan.thewhitesail.users.service.UserService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -29,6 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import javax.transaction.Transactional;
+import java.io.Serializable;
 
 /**
  * Project theWhiteSail
@@ -49,7 +49,7 @@ public class UserController {
 
     @RequestMapping(path = "/signUp", method = RequestMethod.POST)
     @Transactional
-    public WebTransmissionInfo signUp(@RequestParam(value = "username") String name, @RequestParam(value =
+    public Serializable signUp(@RequestParam(value = "username") String name, @RequestParam(value =
             "password") String password) {
         return userService.userSignUp(name,password);
     }

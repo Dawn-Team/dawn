@@ -21,10 +21,9 @@ const logoutURL="/auth/logout";
 export default class Security {
 
     // status code list
-    // 1 - ok
-    // 0 - inited
-    // -1 - invalid username input
-    // -2 invalid password input
+    // 1 - exception
+    // 0 - ok
+    // -1 - initialized
 
     constructor() {
         this._loginURL = "/auth/login";
@@ -64,14 +63,14 @@ export default class Security {
     login(username, password, recall_fun) {
         let loginInfo = {};
         loginInfo["status"] = "initialized";
-        loginInfo["code"] = 0;
+        loginInfo["code"] = -1;
         if (username === null || username === undefined) {
             loginInfo.status = "invalid_username_input";
-            loginInfo.code = -1;
+            loginInfo.code = 1;
             recall_fun(loginInfo);
         } else if (password === null || password === undefined) {
             loginInfo.status = "invalid_password_input";
-            loginInfo.code = -2;
+            loginInfo.code = 1;
             recall_fun(loginInfo);
         } else {
             this._submitLogin(username, password, recall_fun);
@@ -93,7 +92,7 @@ export default class Security {
                 location.reload();
             }
         });
-        return {"status": "ok", "code": 1};
+        return {"status": "ok", "code": 0};
     }
 
 

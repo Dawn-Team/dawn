@@ -18,7 +18,7 @@
 
 package com.arvinsichuan.thewhitesail.auth;
 
-import com.arvinsichuan.general.WebTransmissionInfo;
+import com.arvinsichuan.general.WebInfoEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,24 +33,25 @@ import java.io.Serializable;
  * Date: 2017/10/1
  * <p>
  * Package: com.arvinsichuan.auth
+ * @author ArvinSiChuan
  */
 @RestController
 @RequestMapping(path = "/auth")
 public class LogStatusController {
 
     @RequestMapping(path = "/status", method = RequestMethod.POST)
-    public WebTransmissionInfo getLoginStatus() {
-        WebTransmissionInfo info = new WebTransmissionInfo();
-        info.put("loginStatus", SecurityInfo.getTopAuth());
-        info.ok();
-        info.put("roleCode", SecurityInfo.getTopAuth().ordinal());
+    public Serializable getLoginStatus() {
+        WebInfoEntity info = new WebInfoEntity();
+        info.isOK();
+        info.addInfoAndData("loginStatus", SecurityInfo.getTopAuth());
+        info.addInfoAndData("roleCode", SecurityInfo.getTopAuth().ordinal());
         return info;
     }
 
     @RequestMapping(path = "/login",method = RequestMethod.GET)
     public Serializable loginPageInfo(){
-        WebTransmissionInfo info = getLoginStatus();
-        info.put("login page","/auth/login");
+        WebInfoEntity info = (WebInfoEntity) getLoginStatus();
+        info.addInfoAndData("login page","/auth/login");
         return info;
     }
 }

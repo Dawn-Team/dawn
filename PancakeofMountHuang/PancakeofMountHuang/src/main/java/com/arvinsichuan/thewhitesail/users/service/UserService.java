@@ -19,7 +19,7 @@
 package com.arvinsichuan.thewhitesail.users.service;
 
 
-import com.arvinsichuan.general.WebTransmissionInfo;
+import com.arvinsichuan.general.WebInfoEntity;
 import com.arvinsichuan.thewhitesail.users.entity.AuthoritiesEnum;
 import com.arvinsichuan.thewhitesail.users.entity.Authority;
 import com.arvinsichuan.thewhitesail.users.entity.User;
@@ -49,8 +49,8 @@ public class UserService {
     @Resource(name = "passEncoder")
     private BCryptPasswordEncoder passwordEncoder;
 
-    public WebTransmissionInfo userSignUp(String username, String password) {
-        WebTransmissionInfo webTransmissionInfo = new WebTransmissionInfo();
+    public WebInfoEntity userSignUp(String username, String password) {
+        WebInfoEntity webInfo = new WebInfoEntity();
 
         // process username to lowercase
         username = username.toLowerCase();
@@ -72,21 +72,19 @@ public class UserService {
 
         User userInDB = userRepository.findOne(username);
         if (userInDB != null && userInDB.getUsername().equals(username)) {
-            webTransmissionInfo.exception("User Already Exists.");
-            webTransmissionInfo.put(WebTransmissionInfo.infoName.status.name(), WebTransmissionInfo.status.userExists);
-            webTransmissionInfo.put(WebTransmissionInfo.infoName.code.name(), WebTransmissionInfo.status.userExists
-                    .ordinal());
+            webInfo.haveException(new Exception("User Already Exists."));
+            webInfo.duplicatedData();
         } else {
             try {
                 userRepository.save(user);
                 user.setPassword("[PROTECTED]");
-                webTransmissionInfo.ok();
-                webTransmissionInfo.put("user", user);
+                webInfo.isOK();
+                webInfo.addInfoAndData("user", user);
             } catch (Exception e) {
                 e.printStackTrace();
-                webTransmissionInfo.exception("Exception in saving" + e.getMessage());
+                webInfo.haveException(e, "Exception in saving");
             }
         }
-        return webTransmissionInfo;
+        return webInfo;
     }
 }

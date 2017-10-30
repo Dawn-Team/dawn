@@ -32,6 +32,7 @@ import java.util.UUID;
  * Date: 2017/10/7
  * <p>
  * Package: com.arvinsichuan.thewhitesail.articles.repository
+ * @author ArvinSiChuan
  */
 @Repository("articlesRepository")
 public interface ArticlesRepository extends PagingAndSortingRepository<Article,UUID> {

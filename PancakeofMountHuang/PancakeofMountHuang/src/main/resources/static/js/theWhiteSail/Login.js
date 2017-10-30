@@ -61,11 +61,13 @@ export default class Login {
             let password = formObject.find("input[name='password']").val();
             new Security().login(username, password, function (info) {
                 switch (info.code) {
-                    case 0://for initialized (Security module)
+                    case -1://for initialized (Security module)
                         Login._onInitialized(info);
                         break;
-                    case 1://for ok (Security module)
+                    case 0://for ok (Security module)
                         Login._onRequestSuccess(info);
+                        break;
+                    case 1:
                         break;
                     default:
                         break;

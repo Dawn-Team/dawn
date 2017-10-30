@@ -16,42 +16,22 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.arvinsichuan.general;
-
-import java.util.TreeMap;
+package com.arvinsichuan.general.exceptions;
 
 /**
- * Project theWhiteSail
+ * Project PancakeofMountHuang
  * <p>
  * Author: arvinsc@foxmail.com
  * <p>
- * Date: 2017/9/28
+ * Date: 30-Oct-17
  * <p>
- * Package: com.arvinsichuan.general
+ * Package: com.arvinsichuan.general.exceptions
+ * @author ArvinSiChuan
  */
-public class WebTransmissionInfo extends TreeMap<Object, Object> {
-    public enum infoName {status, code, exceptionInfo}
+public class EmptyDataException extends Exception {
+    private static final long serialVersionUID = -8473288004413293738L;
 
-    public enum status {initialized, ok, failed,userExists}
-
-    public WebTransmissionInfo() {
-        put(infoName.status.name(), status.initialized);
-        put(infoName.code.name(), status.initialized.ordinal());
+    public EmptyDataException(String message) {
+        super(message);
     }
-
-    public void failed() {
-        put(infoName.status.name(), status.failed);
-        put(infoName.code.name(), status.failed.ordinal());
-    }
-
-    public void ok() {
-        put(infoName.status.name(), status.ok);
-        put(infoName.code.name(), status.ok.ordinal());
-    }
-
-    public void exception(Object exceptionInfo) {
-        failed();
-        put(infoName.exceptionInfo.name(), exceptionInfo);
-    }
-
 }

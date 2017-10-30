@@ -36,6 +36,7 @@ import java.util.UUID;
  * Date: 2017/10/7
  * <p>
  * Package: com.arvinsichuan.thewhitesail.articles.entity
+ * @author ArvinSiChuan
  */
 @Entity
 @Table(schema = DbGeneral.SCHEMA_NAME, name = "articles")
