@@ -109,6 +109,14 @@
 			<!--<groupId>org.springframework.boot</groupId>-->
 			<!--<artifactId>spring-boot-starter-activemq</artifactId>-->
 		<!--</dependency>-->
+
+
+		<!--POI-->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.9</version>
+		</dependency>
 	</dependencies>
 
 	<build>

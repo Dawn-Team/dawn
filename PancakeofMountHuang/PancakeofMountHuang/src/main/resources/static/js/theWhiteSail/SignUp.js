@@ -123,10 +123,8 @@ export default class SignUp {
                 })
             } else {
                 formObject.find(".form-group:gt(0)").addClass("has-error");
-                formObject.find(".form-group:gt(0)").append("<span class='help-block'>Indifferent password</span>")
+                formObject.find(".form-group:gt(0)").append("<span class='help-block'>Password should be the same.</span>")
             }
-
-
             return false
         })
     }

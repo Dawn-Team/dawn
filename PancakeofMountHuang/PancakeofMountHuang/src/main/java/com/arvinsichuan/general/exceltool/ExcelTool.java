@@ -16,7 +16,11 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.arvinsichuan.general.exceptions;
+package com.arvinsichuan.general.exceltool;
+
+import org.apache.poi.ss.usermodel.Workbook;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Service;
 
 /**
  * Project PancakeofMountHuang
@@ -25,13 +29,11 @@ package com.arvinsichuan.general.exceptions;
  * <p>
  * Date: 30-Oct-17
  * <p>
- * Package: com.arvinsichuan.general.exceptions
+ * Package: com.arvinsichuan.general.exceltool
  * @author ArvinSiChuan
  */
-public class EmptyDataException extends Exception {
-    private static final long serialVersionUID = -8473288004413293738L;
-
-    public EmptyDataException(String message) {
-        super(message);
-    }
+@Service("excelTool")
+@Scope("prototype")
+public class ExcelTool {
+    private Workbook workBook;
 }
