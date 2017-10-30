@@ -5,23 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ddd20f1-68f4-4201-8783-e000aa07d522" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/WebInfoEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/exceptions/DuplicatedDataException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/exceptions/EmptyDataException.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/WebTransmissionInfo.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/controller/ArticlesController.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/controller/ArticlesController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/entity/Article.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/entity/Article.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/repository/ArticlesRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/repository/ArticlesRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/repository/TopicsRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/repository/TopicsRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/service/ArticleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/articles/service/ArticleService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/auth/LogStatusController.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/auth/LogStatusController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/auth/SecurityInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/auth/SecurityInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/editor/controller/EditorController.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/editor/controller/EditorController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/Login.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/Login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/Security.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/Security.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/ModalTool.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/ModalTool.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/SignUp.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/SignUp.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,42 +18,46 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="project_dawn@localhost" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="project_dawn@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="project_dawn" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="project_dawn@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="project_dawn" type="e3449647:DbNodeDescriptor" />
+        <item name="users" type="e3449647:DbNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WebInfoEntity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/WebInfoEntity.java">
+      <file leaf-file-name="SignUp.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/SignUp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="104" column="57" lean-forward="true" selection-start-line="104" selection-start-column="57" selection-end-line="104" selection-end-column="57" />
+            <state relative-caret-position="399">
+              <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#WebInfoEntity#0" expanded="false" />
+                <marker date="1509338627333" expanded="true" signature="1500:1551" ph="..." />
+                <marker date="1509338627333" expanded="true" signature="1500:1568" ph="..." />
+                <marker date="1509338627333" expanded="true" signature="1835:1852" ph="..." />
+                <marker date="1509338627333" expanded="true" signature="3758:3795" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/Login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="96" column="31" lean-forward="true" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#628#667#0" expanded="true" />
-                <marker date="1509333154141" expanded="true" signature="1311:1362" ph="..." />
-                <marker date="1509333154141" expanded="true" signature="1839:1875" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Security.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/Security.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="76" column="34" lean-forward="true" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -88,6 +78,10 @@
       <find>test</find>
       <find>thymesVar</find>
       <find>info</find>
+      <find>submitt</find>
+      <find>onLogin</find>
+      <find>username</find>
+      <find>_submit</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -101,8 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/entity/AuthoritiesEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/entity/AuthorityKey.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/users/entity/Authority.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/thewhitesail/editor/controller/EditorController.java" />
@@ -152,6 +144,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/Security.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/Login.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/WebInfoEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/ModalTool.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/SignUp.js" />
       </list>
     </option>
   </component>
@@ -299,6 +293,36 @@
               <item name="PancakeofMountHuang" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="arvinsichuan" type="462c0819:PsiDirectoryNode" />
+              <item name="thewhitesail" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PancakeofMountHuang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PancakeofMountHuang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="arvinsichuan" type="462c0819:PsiDirectoryNode" />
+              <item name="thewhitesail" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PancakeofMountHuang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PancakeofMountHuang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="arvinsichuan" type="462c0819:PsiDirectoryNode" />
+              <item name="thewhitesail" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PancakeofMountHuang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PancakeofMountHuang" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -338,27 +362,6 @@
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="theWhiteSail" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="PancakeofMountHuang" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PancakeofMountHuang" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PancakeofMountHuang" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PancakeofMountHuang" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PancakeofMountHuang" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PancakeofMountHuang" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="arvinsichuan" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -383,6 +386,7 @@
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/arvinsichuan" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -580,7 +584,7 @@
       <workItem from="1509256319548" duration="868000" />
       <workItem from="1509261439418" duration="148000" />
       <workItem from="1509264877393" duration="651000" />
-      <workItem from="1509330214512" duration="3305000" />
+      <workItem from="1509330214512" duration="7326000" />
     </task>
     <task id="LOCAL-00001" summary="alter test file">
       <created>1508996165606</created>
@@ -603,7 +607,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509245064560</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update WebInfo Entity to fit more scenarios.">
+      <created>1509333836469</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1509333836469</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -612,7 +623,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19783000" />
+    <option name="totallyTimeSpent" value="23804000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
@@ -622,7 +633,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32955405" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32955405" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -660,7 +671,7 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32955405" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -670,7 +681,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847682" sideWeight="0.5" order="10" side_tool="false" content_ui="combo" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32847682" sideWeight="0.5" order="10" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847682" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -693,55 +704,14 @@
     <MESSAGE value="alter test file" />
     <MESSAGE value="delete demo test file, TEST CAN ONLY BE DONE IN LOCAL DUE TO THE DB" />
     <MESSAGE value="update to fit project dawn" />
-    <option name="LAST_COMMIT_MESSAGE" value="update to fit project dawn" />
+    <MESSAGE value="update WebInfo Entity to fit more scenarios." />
+    <option name="LAST_COMMIT_MESSAGE" value="update WebInfo Entity to fit more scenarios." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/PmhApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/configuration/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/configuration/MethodSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-actuator/1.5.8.RELEASE/spring-boot-actuator-1.5.8.RELEASE.jar!/org/springframework/boot/actuate/endpoint/mvc/AuditEventsMvcEndpoint.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -985,18 +955,7 @@
         <state relative-caret-position="171">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/theWhiteSail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="25" column="15" lean-forward="false" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#835#868#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1022,30 +981,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/arvinsichuan/thewhitesail/auth/SecurityInfoTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="53" column="33" lean-forward="false" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/exceptions/DuplicatedDataException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="34" column="21" lean-forward="false" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
           <folding>
-            <element signature="e#1242#1243#0" expanded="true" />
-            <element signature="e#1272#1273#0" expanded="true" />
+            <element signature="e#1242#1243#0" expanded="false" />
+            <element signature="e#1272#1273#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
-          <caret line="87" column="22" lean-forward="false" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1158,21 +1101,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/Security.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/ModalTool.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="76" column="34" lean-forward="true" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
+        <state relative-caret-position="251">
+          <caret line="100" column="56" lean-forward="false" selection-start-line="100" selection-start-column="56" selection-end-line="100" selection-end-column="56" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/theWhiteSail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="46" column="22" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="22" />
+          <folding>
+            <element signature="e#835#868#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/Editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="179" column="29" lean-forward="true" selection-start-line="179" selection-start-column="29" selection-end-line="179" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <marker date="1507474884346" expanded="true" signature="1542:1553" ph="..." />
+            <marker date="1507474884346" expanded="true" signature="1656:1686" ph="..." />
+            <marker date="1507474884346" expanded="true" signature="1863:1880" ph="..." />
+            <marker date="1507474884346" expanded="true" signature="1938:1952" ph="..." />
+            <marker date="1507474884346" expanded="true" signature="2059:2083" ph="..." />
+            <marker date="1507474884346" expanded="true" signature="2162:2178" ph="..." />
+            <marker date="1507474884346" expanded="true" signature="2296:2309" ph="..." />
+            <marker date="1507474884346" expanded="true" signature="2817:2831" ph="..." />
+            <marker date="1507474884346" expanded="true" signature="3030:3047" ph="..." />
+            <marker date="1507474884346" expanded="true" signature="3104:3140" ph="..." />
+            <marker date="1507474884346" expanded="true" signature="3216:3246" ph="..." />
+            <marker date="1507474884346" expanded="true" signature="3375:3385" ph="..." />
+            <marker date="1507474884346" expanded="true" signature="3795:3824" ph="..." />
+            <marker date="1507474884346" expanded="true" signature="3929:3956" ph="..." />
+            <marker date="1507474884346" expanded="true" signature="4066:4096" ph="..." />
+            <marker date="1507474884346" expanded="true" signature="4207:4236" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/Login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="96" column="31" lean-forward="true" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
+        <state relative-caret-position="435">
+          <caret line="62" column="36" lean-forward="true" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#628#667#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#628#667#0" expanded="false" />
             <marker date="1509333154141" expanded="true" signature="1311:1362" ph="..." />
             <marker date="1509333154141" expanded="true" signature="1839:1875" ph="..." />
           </folding>
@@ -1181,11 +1160,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/WebInfoEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="104" column="57" lean-forward="true" selection-start-line="104" selection-start-column="57" selection-end-line="104" selection-end-column="57" />
+        <state relative-caret-position="323">
+          <caret line="84" column="39" lean-forward="false" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#WebInfoEntity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="53" column="32" lean-forward="false" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0b80c8f6-e7be-4ae7-9088-3f2b0ad15626/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/9d889e22/0b80c8f6-e7be-4ae7-9088-3f2b0ad15626/project_dawn.users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arvinsichuan/thewhitesail/users/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="77" column="17" lean-forward="true" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/Util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/Security.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="53" column="25" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/SignUp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+          <folding>
+            <marker date="1509338627333" expanded="true" signature="1500:1551" ph="..." />
+            <marker date="1509338627333" expanded="true" signature="1500:1568" ph="..." />
+            <marker date="1509338627333" expanded="true" signature="1835:1852" ph="..." />
+            <marker date="1509338627333" expanded="true" signature="3758:3795" ph="..." />
           </folding>
         </state>
       </provider>

@@ -98,7 +98,7 @@ export default class ModalTool {
     }
 
     static show(show) {
-        if (show === null || show === undefined || show) {
+        if (show === null || show === undefined || 'show') {
             this._getModalObject().modal('show')
         } else {
             this._getModalObject().modal('hide')

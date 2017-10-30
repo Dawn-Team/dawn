@@ -17,6 +17,7 @@
 import ModalTool from './ModalTool.js'
 import Security from './Security.js'
 import Util from './Util.js'
+import Login from './Login.js'
 
 const SIGN_UP_FORM_TEMPLATE_CONTENT =
     '<form class="col-sm-12" id="sign_up_form">' +
@@ -33,8 +34,12 @@ const SIGN_UP_FORM_TEMPLATE_CONTENT =
 
 
 const SIGN_UP_FORM_TEMPLATE_FOOTER =
+    '<span class="pull-left" style="font-size:large;font-weight: bold;margin-top: 0.3em;text-align: left"></span>' +
     '<input type="reset" class="btn btn-default" value="Reset" form="sign_up_form"/>' +
     '<input type="submit" class="btn btn-primary" value="Submit" form="sign_up_form"/>';
+
+const LOGIN_BTN =
+    '<input type="button" class="btn btn-default"  style="margin-top: 0.3em" value="Log In"/>';
 
 
 export default class SignUp {
@@ -73,6 +78,26 @@ export default class SignUp {
         });
     }
 
+    _onSubmitSuccess(info) {
+        let footer = ModalTool.getFooterObject();
+        let body = ModalTool.getBodyObject();
+        if (info.code == 0) {
+            footer.find("span").removeClass("text-muted text-danger text-warning text-primary text-info");
+            footer.find("span").html('Sign up <br />Successful!');
+            footer.find("span").addClass("text-success");
+            body.find(".form-group").addClass("has-success");
+            footer.find("input").hide();
+            footer.append(LOGIN_BTN);
+            footer.find("input[type='button']").click(function () {
+                ModalTool.show('hide');
+                new Login().onLogin();
+                body.find("input[name='username']").val(info.full.user.username)
+            });
+        } else {
+            console.log(info)
+        }
+    }
+
     onSignUp() {
         ModalTool.setSize("small");
         ModalTool.setHeader("<span style='font-size: x-large;font-weight: bold;'>User Sign up</span>", false);
@@ -81,14 +106,20 @@ export default class SignUp {
         ModalTool.show();
         ModalTool.setFocus($("input[purpose='autoFocus']"));
         let signUpObject = this;
+        let footer = ModalTool.getFooterObject();
         $("#sign_up_form").submit(function () {
             let formObject = $("#sign_up_form");
             let username = formObject.find("input[name='username']").val();
             let password = formObject.find("input[name='password']").val();
             let passwordRepeat = formObject.find("input[name='password_repeat']").val();
             if (password === passwordRepeat) {
+                footer.find("span").empty();
+                footer.find("input").attr("disabled", "disabled");
+                footer.find("span").removeClass("text-muted text-danger text-warning text-primary text-success");
+                footer.find("span").addClass("text-info");
+                footer.find("span").text('Submitting...');
                 signUpObject.onSubmit(username, password, function (info) {
-                    console.log(info);
+                    signUpObject._onSubmitSuccess(info)
                 })
             } else {
                 formObject.find(".form-group:gt(0)").addClass("has-error");
@@ -116,4 +147,6 @@ export default class SignUp {
             this._submit(username, password, recall_fun)
         }
     }
+
+
 }
