@@ -31,7 +31,7 @@ package com.arvinsichuan.general.exceptions;
 public class DuplicatedDataException extends Exception{
     private static final long serialVersionUID = -9173887517681465038L;
 
-    public DuplicatedDataException(String message){
-        super(message);
+    public DuplicatedDataException(String duplicatedMessage){
+        super("Duplicated Data at "+duplicatedMessage);
     }
 }

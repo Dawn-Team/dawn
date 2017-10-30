@@ -20,6 +20,8 @@ package com.arvinsichuan.thewhitesail.users.controller;
 
 
 
+import com.arvinsichuan.general.WebInfoEntity;
+import com.arvinsichuan.general.exceptions.DuplicatedDataException;
 import com.arvinsichuan.thewhitesail.users.service.UserService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -48,10 +50,15 @@ public class UserController {
     UserService userService;
 
     @RequestMapping(path = "/signUp", method = RequestMethod.POST)
-    @Transactional
     public Serializable signUp(@RequestParam(value = "username") String name, @RequestParam(value =
             "password") String password) {
-        return userService.userSignUp(name,password);
+        WebInfoEntity webInfoEntity=new WebInfoEntity();
+        try {
+            webInfoEntity= userService.userSignUp(name,password);
+        } catch (DuplicatedDataException e) {
+            webInfoEntity.haveException(e);
+        }
+        return webInfoEntity;
     }
 
 }
