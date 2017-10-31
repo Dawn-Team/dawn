@@ -36,6 +36,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
 @Service
+
 @ConfigurationProperties("com.arvinsichuan.dawn")
 public class PmhConfigurations {
 //    *************** DEMO ********************

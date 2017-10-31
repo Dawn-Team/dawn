@@ -33,7 +33,7 @@ import java.util.List;
  * @author ArvinSiChuan
  */
 @SpringBootApplication
-public class PmhApplication implements CommandLineRunner{
+public class PmhApplication{
 
     @Autowired
     private PmhConfigurations pmhConfigurations;
@@ -41,10 +41,4 @@ public class PmhApplication implements CommandLineRunner{
 	public static void main(String[] args) {
 		SpringApplication.run(PmhApplication.class, args);
 	}
-
-    @Override
-    public void run(String... strings) throws Exception {
-        System.out.println("********************************************************************************");
-        System.out.println(pmhConfigurations.getSchemaName());
-    }
 }
