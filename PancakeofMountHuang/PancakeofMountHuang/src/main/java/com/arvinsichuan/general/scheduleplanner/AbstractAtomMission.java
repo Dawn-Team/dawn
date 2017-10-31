@@ -29,13 +29,60 @@ import java.util.UUID;
  * Date: 31-Oct-17
  * <p>
  * Package: com.arvinsichuan.general.scheduleplanner
+ *
  * @author ArvinSiChuan
  */
-public abstract class AbstractAtomMission implements Runnable,Serializable {
-    private static final long serialVersionUID = -7922589714247736889L;
+public abstract class AbstractAtomMission implements Runnable, Serializable, Comparable {
 
-    private UUID missionUuid=UUID.randomUUID();
-    private UUID preRequisition=null;
-    private UUID postRequisition=null;
+    private UUID missionUuid = UUID.randomUUID();
+    private AbstractAtomMission preRequisition = null;
+    private AbstractAtomMission postRequisition = null;
+    private int priority = -1;
+    private MissionStatus status;
 
+    public UUID getMissionUuid() {
+        return missionUuid;
+    }
+
+    public void setMissionUuid(UUID missionUuid) {
+        this.missionUuid = missionUuid;
+    }
+
+    public AbstractAtomMission getPreRequisition() {
+        return preRequisition;
+    }
+
+    public void setPreRequisition(AbstractAtomMission preRequisition) {
+        this.preRequisition = preRequisition;
+    }
+
+    public AbstractAtomMission getPostRequisition() {
+        return postRequisition;
+    }
+
+    public void setPostRequisition(AbstractAtomMission postRequisition) {
+        this.postRequisition = postRequisition;
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
+    public MissionStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(MissionStatus status) {
+        this.status = status;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        AbstractAtomMission mission = (AbstractAtomMission) o;
+        return mission.getPriority() - this.getPriority();
+    }
 }

@@ -16,26 +16,24 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.arvinsichuan;
-
-import com.arvinsichuan.general.PmhConfigurations;
-import com.arvinsichuan.general.exceltool.ExcelTool;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import javax.annotation.Resource;
-import java.io.File;
-import java.util.List;
+package com.arvinsichuan.general.scheduleplanner;
 
 /**
- * @author ArvinSiChuan
+ * Project PancakeofMountHuang
+ * <p>
+ * Author: arvinsc@foxmail.com
+ * <p>
+ * Date: 31-Oct-17
+ * <p>
+ * Package: com.arvinsichuan.general.scheduleplanner
  */
-@SpringBootApplication
-public class PmhApplication{
+public enum MissionStatus {
+    FINISHED,
+    WAITING,
+    RUNNING,
+    READY,
+    SUSPENDING,
+    DEAD,
+    ACOMPLISHED
 
-	public static void main(String[] args) {
-		SpringApplication.run(PmhApplication.class, args);
-	}
 }
