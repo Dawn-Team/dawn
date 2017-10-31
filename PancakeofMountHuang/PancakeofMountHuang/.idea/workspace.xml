@@ -9,19 +9,9 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/pmh/datasource/DataSourceCube.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/pmh/datasource/ExcelDPPDataSourceImpl.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/dawn/pmh/datasource/exceptions/ParametersNotFoundException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/dawn/pmh/NewSomethingDecision.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/dawn/pmh/PreProcessProject.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/dawn/pmh/pmhMain.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../.gitignore" afterPath="$PROJECT_DIR$/../../.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/PmhApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/PmhApplication.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/exceltool/ExcelTool.java" afterPath="$PROJECT_DIR$/src/main/java/com/arvinsichuan/general/exceltool/ExcelTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/dawn/pmh/pmh.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/dawn/pmh/pmh.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/Editor.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/Editor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/ModalTool.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/ModalTool.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/SignUp.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/theWhiteSail/SignUp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -858,7 +848,7 @@
       <workItem from="1509261439418" duration="148000" />
       <workItem from="1509264877393" duration="651000" />
       <workItem from="1509330214512" duration="28502000" />
-      <workItem from="1509409590882" duration="14853000" />
+      <workItem from="1509409590882" duration="14904000" />
     </task>
     <task id="LOCAL-00001" summary="alter test file">
       <created>1508996165606</created>
@@ -902,7 +892,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509350889837</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add project UI finished">
+      <created>1509429873554</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1509429873554</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -938,7 +935,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59833000" />
+    <option name="totallyTimeSpent" value="59884000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1000,7 +997,8 @@
     <MESSAGE value="update sign in module." />
     <MESSAGE value="optimize exception handler business." />
     <MESSAGE value="datasource interface finished and an implementation is finished and tested." />
-    <option name="LAST_COMMIT_MESSAGE" value="datasource interface finished and an implementation is finished and tested." />
+    <MESSAGE value="add project UI finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="add project UI finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

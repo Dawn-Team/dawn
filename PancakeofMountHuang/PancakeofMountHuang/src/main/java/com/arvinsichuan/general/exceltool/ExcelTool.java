@@ -18,9 +18,13 @@
 
 package com.arvinsichuan.general.exceltool;
 
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Service;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Project PancakeofMountHuang
@@ -30,10 +34,19 @@ import org.springframework.stereotype.Service;
  * Date: 30-Oct-17
  * <p>
  * Package: com.arvinsichuan.general.exceltool
+ *
  * @author ArvinSiChuan
  */
-@Service("excelTool")
-@Scope("prototype")
 public class ExcelTool {
-    private Workbook workBook;
+
+    public ExcelTool() {
+
+    }
+
+    public static Workbook readExcelFile(File file) throws EncryptedDocumentException, InvalidFormatException, IOException {
+        return WorkbookFactory.create(file);
+    }
+
+
+
 }
