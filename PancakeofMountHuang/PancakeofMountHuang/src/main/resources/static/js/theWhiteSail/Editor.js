@@ -176,10 +176,10 @@ export default class Editor {
             mainColOb.find("div[data-toggle='editor']").fadeIn("3000");
             onEditingFlag = true;
         } else {
-            let editorOb = $("#editorAnchor");
+            let editorOb = $("div[data-toggle='editor']");
             editorOb.click();
-            editorOb.parent().effect('shake');
-            editorOb.parent().find("input[data-role='title']").focus();
+            editorOb.effect('shake');
+            editorOb.find("input[data-role='title']").focus();
             return "on editing";
         }
     }

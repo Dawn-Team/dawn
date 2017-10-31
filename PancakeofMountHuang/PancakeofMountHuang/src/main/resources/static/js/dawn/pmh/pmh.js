@@ -16,6 +16,7 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 import Main from "../../theWhiteSail/theWhiteSail.js"
+import PMHMain from "./pmhMain.js";
 
 $(document).ready(function () {
     let main = new Main();
@@ -24,4 +25,8 @@ $(document).ready(function () {
     main.setSignIn();
     main.setLogout();
     main.setNewArticle();
+
+    let pmhMain=new PMHMain();
+    pmhMain.setAddSometing();
 });
+

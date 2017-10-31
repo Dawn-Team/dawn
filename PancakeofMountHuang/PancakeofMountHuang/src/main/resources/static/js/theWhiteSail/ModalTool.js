@@ -92,16 +92,16 @@ export default class ModalTool {
 
     static _getModalObject() {
         if (this._modalObject === null || this._modalObject === undefined) {
-            this._modalObject = $(".modal")
+            this._modalObject = $(".modal");
         }
         return this._modalObject
     }
 
     static show(show) {
-        if (show === null || show === undefined || 'show') {
-            this._getModalObject().modal('show')
+        if (show === null || show === undefined || show==='show') {
+            this._getModalObject().modal('show');
         } else {
-            this._getModalObject().modal('hide')
+            this._getModalObject().modal('hide');
         }
     }
 }

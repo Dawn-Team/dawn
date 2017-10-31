@@ -10,6 +10,9 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+# Test source files due to db environment
+*Test.java
+
 # Package Files #
 *.jar
 *.war

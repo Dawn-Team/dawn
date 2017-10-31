@@ -22,7 +22,7 @@ import Login from './Login.js'
 const SIGN_UP_FORM_TEMPLATE_CONTENT =
     '<form class="col-sm-12" id="sign_up_form">' +
     '   <div class="form-group">' +
-    '       <input class="form-control"  type="text" required="required" name="username" placeholder="User name" purpose="autoFocus"/>' +
+    '       <input class="form-control"  type="text" required="required" name="username" placeholder="User name" data-purpose="autoFocus"/>' +
     '       <span></span>' +
     '   </div>' +
     '   <div class="form-group">' +
@@ -111,7 +111,7 @@ export default class SignUp {
         ModalTool.setBody(SIGN_UP_FORM_TEMPLATE_CONTENT);
         ModalTool.setFooter(SIGN_UP_FORM_TEMPLATE_FOOTER, false);
         ModalTool.show();
-        ModalTool.setFocus($("input[purpose='autoFocus']"));
+        ModalTool.setFocus($("input[data-purpose='autoFocus']"));
         let signUpObject = this;
         let footer = ModalTool.getFooterObject();
         $("#sign_up_form").submit(function () {
