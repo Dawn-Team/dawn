@@ -19,7 +19,7 @@
 package com.arvinsichuan.thewhitesail.articles.entity;
 
 
-import com.arvinsichuan.general.DbGeneral;
+import com.arvinsichuan.general.PmhConfigurations;
 import com.arvinsichuan.thewhitesail.users.entity.User;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
@@ -39,7 +39,7 @@ import java.util.UUID;
  * @author ArvinSiChuan
  */
 @Entity
-@Table(schema = DbGeneral.SCHEMA_NAME, name = "articles")
+@Table(name = "articles")
 public class Article implements Serializable {
     private static final long serialVersionUID = -7306373709517800488L;
 

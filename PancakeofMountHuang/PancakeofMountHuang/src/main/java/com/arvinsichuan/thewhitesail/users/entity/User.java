@@ -18,7 +18,7 @@
 
 package com.arvinsichuan.thewhitesail.users.entity;
 
-import com.arvinsichuan.general.DbGeneral;
+import com.arvinsichuan.general.PmhConfigurations;
 import com.arvinsichuan.thewhitesail.articles.entity.Article;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
@@ -37,7 +37,7 @@ import java.util.List;
  * @author ArvinSiChuan
  */
 @Entity
-@Table(schema = DbGeneral.SCHEMA_NAME, name = "users")
+@Table( name = "users")
 public class User implements Serializable {
 
     private static final long serialVersionUID = 4683637038104129460L;

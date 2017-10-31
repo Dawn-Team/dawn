@@ -19,7 +19,7 @@
 package com.arvinsichuan.thewhitesail.articles.entity;
 
 
-import com.arvinsichuan.general.DbGeneral;
+import com.arvinsichuan.general.PmhConfigurations;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import org.hibernate.annotations.ColumnDefault;
 
@@ -37,7 +37,7 @@ import java.util.List;
  * Package: com.arvinsichuan.thewhitesail.articles.entity
  */
 @Entity
-@Table(schema = DbGeneral.SCHEMA_NAME,name = "topics")
+@Table(name = "topics")
 public class Topic implements Serializable {
     private static final long serialVersionUID = 5889885016886937689L;
 

@@ -18,6 +18,7 @@
 
 package com.arvinsichuan;
 
+import com.arvinsichuan.general.PmhConfigurations;
 import com.arvinsichuan.general.exceltool.ExcelTool;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -32,11 +33,18 @@ import java.util.List;
  * @author ArvinSiChuan
  */
 @SpringBootApplication
-public class PmhApplication{
+public class PmhApplication implements CommandLineRunner{
 
+    @Autowired
+    private PmhConfigurations pmhConfigurations;
 
 	public static void main(String[] args) {
 		SpringApplication.run(PmhApplication.class, args);
 	}
 
+    @Override
+    public void run(String... strings) throws Exception {
+        System.out.println("********************************************************************************");
+        System.out.println(pmhConfigurations.getSchemaName());
+    }
 }

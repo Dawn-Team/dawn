@@ -18,7 +18,7 @@
 
 package com.arvinsichuan.thewhitesail.users.entity;
 
-import com.arvinsichuan.general.DbGeneral;
+import com.arvinsichuan.general.PmhConfigurations;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
@@ -34,7 +34,7 @@ import java.io.Serializable;
  * Package: com.arvinsichuan.users.entity
  */
 @Entity
-@Table(schema = DbGeneral.SCHEMA_NAME,name = "authorities")
+@Table(name = "authorities")
 @IdClass(AuthorityKey.class)
 public class Authority implements Serializable {
     private static final long serialVersionUID = -8051333978047192441L;
