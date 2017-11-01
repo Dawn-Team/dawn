@@ -50,18 +50,18 @@ public class DatasourceService {
     @Resource(name = "userRepository")
     private UserRepository userRepository;
 
-    public List<DatasourceEntity> getAllDatasource() {
-        return datasourceRepository.findAllByRelatedUser(userRepository.findOne(SecurityInfo.getUsername()));
+    public List<DatasourceEntity> getAllDatasourceByStage(DSStageEnum stage) {
+        return datasourceRepository.findAllByRelatedUserAndStage(userRepository.findOne(SecurityInfo.getUsername()),stage);
     }
 
-    public DatasourceEntity addAnUploadedExcelToDatasource(FileUploadRecord record) {
+    public DatasourceEntity addAnUploadedExcelToDatasource(String location) {
         DatasourceEntity entity = new DatasourceEntity();
         entity.setDsUuid(UUID.randomUUID());
         entity.setRelatedUser(userRepository.findOne(SecurityInfo.getUsername()));
         entity.setStage(DSStageEnum.PRE_PROCESS);
         entity.setStatus(DSStatusEnum.NORMAL);
         entity.setType(DSTypesEnum.EXCEL_FILE);
-        entity.setLocation(record.getFileUuid().toString());
+        entity.setLocation(location);
         return datasourceRepository.save(entity);
     }
 

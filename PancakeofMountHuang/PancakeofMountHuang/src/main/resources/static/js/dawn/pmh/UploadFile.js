@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 import Security from '../../theWhiteSail/Security.js'
+import Util from "../../theWhiteSail/Util.js";
 
 const STEP1_TEMPLATE =
     '<form id="uploadform" class="form-group" enctype="multipart/form-data">' +
@@ -44,8 +45,8 @@ export default class UploadFile {
                     contentType: false,
                     processData: false,
                     success: function (data) {            //服务器响应成功时的处理函数
+                        recallFunc(Util.wrapWebInfo(data));
                         alert("上传成功!");
-                        recallFunc(data);
                     },
                     error: function () { //服务器响应失败时的处理函数
                         alert("上传失败!");

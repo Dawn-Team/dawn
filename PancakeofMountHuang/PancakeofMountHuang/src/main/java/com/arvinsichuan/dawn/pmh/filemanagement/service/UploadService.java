@@ -13,9 +13,9 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.annotation.Resource;
 import java.io.File;
 import java.io.IOException;
-import java.security.Principal;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.UUID;
 
 /*
     Author:Administrator
@@ -35,16 +35,13 @@ public class UploadService {
 
 
     public FileUploadRecord generateAnUploadRecord() {
-        String username = null;
-        Principal principal = SecurityInfo.getPrincipal();
-        if (principal == null) {
-            username = SecurityInfo.getUserDetails().getUsername();
-        } else {
-            username = principal.getName();
-        }
+        String username = SecurityInfo.getUsername();
 
         //创建一个上传记录
         FileUploadRecord fileUpload = new FileUploadRecord();
+
+
+        fileUpload.setFileUuid(UUID.randomUUID());
 
         //设置上传状态为上传中
         fileUpload.setStatus(StatusEnum.UPLOADING);

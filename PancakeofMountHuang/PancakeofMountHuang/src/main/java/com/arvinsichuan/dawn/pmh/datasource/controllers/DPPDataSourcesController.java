@@ -18,6 +18,7 @@
 
 package com.arvinsichuan.dawn.pmh.datasource.controllers;
 
+import com.arvinsichuan.dawn.pmh.datasource.entities.DSStageEnum;
 import com.arvinsichuan.dawn.pmh.datasource.entities.DatasourceEntity;
 import com.arvinsichuan.dawn.pmh.datasource.services.DatasourceService;
 import com.arvinsichuan.dawn.pmh.filemanagement.entity.FileUploadRecord;
@@ -25,9 +26,11 @@ import com.arvinsichuan.general.WebInfoEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Project PancakeofMountHuang
@@ -50,19 +53,21 @@ public class DPPDataSourcesController {
 
     @RequestMapping(path = "/all", method = RequestMethod.GET)
     @PreAuthorize("hasRole('ROLE_USER')")
-    public WebInfoEntity getUsersDataSourcesList() {
+    public WebInfoEntity getUsersDataSourcesList(@RequestParam("stage") String stage) {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
+        List<DatasourceEntity> datasourceEntities = datasourceService
+                .getAllDatasourceByStage(DSStageEnum.valueOf(stage));
         webInfoEntity
                 .isOK()
-                .addInfoAndData("datasourceList", datasourceService.getAllDatasource());
+                .addInfoAndData("datasourceList", datasourceEntities);
         return webInfoEntity;
     }
 
     @RequestMapping(path = "/addUploadedExcelToDS", method = RequestMethod.PUT)
     @PreAuthorize("hasRole('ROLE_USER')")
-    public WebInfoEntity addAnUploadedExcelToDatasource(FileUploadRecord record) {
+    public WebInfoEntity addAnUploadedExcelToDatasource(@RequestParam("location") String location) {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
-        DatasourceEntity datasourceEntity = datasourceService.addAnUploadedExcelToDatasource(record);
+        DatasourceEntity datasourceEntity = datasourceService.addAnUploadedExcelToDatasource(location);
         webInfoEntity
                 .isOK()
                 .addInfoAndData("dsObject", datasourceEntity);

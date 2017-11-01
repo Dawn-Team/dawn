@@ -18,6 +18,7 @@
 
 package com.arvinsichuan.dawn.pmh.datasource.repositories;
 
+import com.arvinsichuan.dawn.pmh.datasource.entities.DSStageEnum;
 import com.arvinsichuan.dawn.pmh.datasource.entities.DatasourceEntity;
 import com.arvinsichuan.general.users.entity.User;
 import org.apache.xmlbeans.impl.xb.xsdschema.Public;
@@ -40,4 +41,6 @@ import java.util.UUID;
 @Repository("datasourceRepo")
 public interface DatasourceRepository extends CrudRepository<DatasourceEntity,UUID>{
     public List<DatasourceEntity> findAllByRelatedUser(User user);
+
+    public List<DatasourceEntity> findAllByRelatedUserAndStage(User user, DSStageEnum stage);
 }

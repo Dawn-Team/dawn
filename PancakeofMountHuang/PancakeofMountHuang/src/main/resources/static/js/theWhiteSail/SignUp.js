@@ -70,11 +70,11 @@ export default class SignUp {
                 password: password
             },
             success: function (webInfo) {
-                recall_fun(Util.wrapWebInfo(data));
+                recall_fun(Util.wrapWebInfo(webInfo));
             },
             error: function (webInfo) {
                 Security.ajaxError(webInfo);
-                recall_fun(Util.wrapWebInfo(data));
+                recall_fun(Util.wrapWebInfo(webInfo));
             }
         });
     }

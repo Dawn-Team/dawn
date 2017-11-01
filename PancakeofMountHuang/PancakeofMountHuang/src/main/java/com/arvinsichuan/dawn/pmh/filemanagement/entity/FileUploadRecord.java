@@ -2,6 +2,11 @@ package com.arvinsichuan.dawn.pmh.filemanagement.entity;
 
 import com.arvinsichuan.general.users.entity.User;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -17,38 +22,35 @@ import java.util.UUID;
 public class FileUploadRecord implements Serializable {
     private static final long serialVersionUID = -580630154682154540L;
     @Id
-    @Column(name = "File_UUID",nullable = false)
+    @Column(name = "File_UUID", nullable = false)
     @GeneratedValue
     private UUID fileUuid;
 
-    @Column(name = "Upload_datetime",nullable = false)
+    @Column(name = "Upload_datetime", nullable = false)
     private LocalDateTime uploadDatetime;
 
-    @Column(name = "Original_filename",nullable = false)
+    @Column(name = "Original_filename", nullable = false)
     private String originalFilename;
 
-    @Column(name = "Extension_name",nullable = false)
+    @Column(name = "Extension_name", nullable = false)
     private String extensionName;
 
-    @Column(name = "Purpose",nullable = false)
+    @Column(name = "Purpose", nullable = false)
     private String purpose;
 
-    @Column(name = "Status",nullable = false)
+    @Column(name = "Status", nullable = false)
     @Enumerated(EnumType.STRING)
     private StatusEnum status;
 
 
-    @ManyToOne(optional = false,fetch = FetchType.LAZY)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "upload_user", insertable = true, nullable = false,
             foreignKey = @ForeignKey(name = "fk_upload_users"))
     @JsonBackReference
     private User uploadUser;
 
     public FileUploadRecord() {
-        fileUuid = UUID.randomUUID();
     }
-
-
 
     public LocalDateTime getUploadDatetime() {
         return uploadDatetime;
