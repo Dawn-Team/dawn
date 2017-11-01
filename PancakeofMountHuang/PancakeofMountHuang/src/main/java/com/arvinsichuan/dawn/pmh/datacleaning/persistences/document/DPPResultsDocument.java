@@ -40,6 +40,7 @@ import java.util.UUID;
 @Document(collection = "data_pre_process_results")
 public class DPPResultsDocument implements Serializable{
 
+    private static final long serialVersionUID = 216772223679373890L;
     @Id
     private String id;
     private UUID projectUuid;
