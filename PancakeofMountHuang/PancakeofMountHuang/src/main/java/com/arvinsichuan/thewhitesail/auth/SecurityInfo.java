@@ -22,6 +22,7 @@ package com.arvinsichuan.thewhitesail.auth;
 
 import com.arvinsichuan.thewhitesail.users.entity.AuthoritiesEnum;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.security.Principal;
 import java.util.ArrayList;
@@ -42,14 +43,21 @@ import java.util.stream.Collectors;
 public class SecurityInfo {
 
     public static Principal getPrincipal() {
-        Principal principal = null;
-        try {
-            principal = (Principal) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        } catch (Exception e) {
-            e.printStackTrace();
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        if (principal instanceof Principal) {
+            return ((Principal) principal);
         }
-        return principal;
+        return null;
     }
+
+    public static UserDetails getUserDetails() {
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        if (principal instanceof UserDetails) {
+            return ((UserDetails) principal);
+        }
+        return null;
+    }
+
 
     static AuthoritiesEnum getTopAuth() {
         Iterator iterator = SecurityContextHolder.getContext().getAuthentication().getAuthorities().iterator();
