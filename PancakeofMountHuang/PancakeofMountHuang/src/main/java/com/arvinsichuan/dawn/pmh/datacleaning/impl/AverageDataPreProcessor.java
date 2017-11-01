@@ -4,16 +4,22 @@ import com.arvinsichuan.dawn.pmh.datacleaning.DataPreProcessor;
 import com.arvinsichuan.dawn.pmh.datasource.DataSourceCube;
 import com.arvinsichuan.general.scheduleplanner.AbstractAtomMission;
 import com.arvinsichuan.general.scheduleplanner.MissionStatus;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
-/*
+/**
+ * @author ash morgan
+ */ /*
     Author:Administrator
     Time:2017/11/1 16:43
 */
 @Service("averageDataCleanMethod")
-public class AverageDataPreProcessor extends AbstractAtomMission implements DataPreProcessor {
+@Scope("prototype")
+public class AverageDataPreProcessor extends AbstractAtomMission  implements DataPreProcessor {
+
+    private static final long serialVersionUID = -849741836957824298L;
 
     private DataSourceCube dataSourceCube;
     private Map param;
