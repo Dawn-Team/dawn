@@ -38,7 +38,9 @@ public class FileUploadController {
             FileUploadRecord fileUploadRecord = uploadService.generateAnUploadRecord();
             try {
                 uploadService.saveUploadFileAndRecord(file, fileUploadRecord);
-                webInfoEntity.isOK();
+                webInfoEntity
+                        .isOK()
+                        .addInfoAndData("uploadRecord",fileUploadRecord);
             } catch (IOException e) {
                 e.printStackTrace();
                 webInfoEntity.haveException(e);
