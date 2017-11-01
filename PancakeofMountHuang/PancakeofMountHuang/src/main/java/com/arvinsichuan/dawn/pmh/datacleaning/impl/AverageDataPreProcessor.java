@@ -44,7 +44,7 @@ public class AverageDataPreProcessor implements DataPreProcessor {
                 try {
                     num = Double.parseDouble(value);
                 }catch (Exception e){
-//                    throw new UnComputationException("This kind of data can't computation");
+//                    throw new InComputableException("This kind of data can't computation");
                     e.printStackTrace();
                     return cubeLevelNames;
                 }
