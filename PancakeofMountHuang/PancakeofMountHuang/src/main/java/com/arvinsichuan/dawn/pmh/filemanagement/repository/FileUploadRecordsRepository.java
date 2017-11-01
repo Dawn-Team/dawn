@@ -1,7 +1,7 @@
 package com.arvinsichuan.dawn.pmh.filemanagement.repository;
 
 import com.arvinsichuan.dawn.pmh.filemanagement.entity.FileUploadRecord;
-import com.arvinsichuan.thewhitesail.users.entity.User;
+import com.arvinsichuan.general.users.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
 package com.arvinsichuan.dawn.pmh.filemanagement.entity;
 
-import com.arvinsichuan.thewhitesail.users.entity.User;
+import com.arvinsichuan.general.users.entity.User;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;

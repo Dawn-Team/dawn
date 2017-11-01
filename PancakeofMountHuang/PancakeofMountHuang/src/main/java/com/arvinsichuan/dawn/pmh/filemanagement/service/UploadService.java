@@ -4,9 +4,9 @@ import com.arvinsichuan.dawn.pmh.filemanagement.entity.FileUploadRecord;
 import com.arvinsichuan.dawn.pmh.filemanagement.entity.StatusEnum;
 import com.arvinsichuan.dawn.pmh.filemanagement.repository.FileUploadRecordsRepository;
 import com.arvinsichuan.general.PmhConfigurations;
-import com.arvinsichuan.thewhitesail.auth.SecurityInfo;
-import com.arvinsichuan.thewhitesail.users.entity.User;
-import com.arvinsichuan.thewhitesail.users.repository.UserRepository;
+import com.arvinsichuan.general.auth.SecurityInfo;
+import com.arvinsichuan.general.users.entity.User;
+import com.arvinsichuan.general.users.repository.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
