@@ -15,6 +15,7 @@
  *     You should have received a copy of the GNU General Public License
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+import UploadFile from "./UploadFile.js";
 const ARTICLE_TEMPLATE =
     '<div class="row" data-toggle="newPreprocessProject"  style="display: none;">' +
     '   <div class="col-sm-12">' +
@@ -63,6 +64,7 @@ export default class PreProcessProject {
             mainColOb.find("div[data-toggle='newPreprocessProject']").fadeIn("3000");
             this._onCreatingOb=$("div[data-toggle='newPreprocessProject']");
             this._onCreatingOb.find(".panel-body").html("TODO HERE");
+            new UploadFile().onNewUpload();
 
             this._onCreatingOb.find("a[name='send']").addClass("disabled");
             this._onCreatingOb.find("a[name='save']").addClass("disabled");

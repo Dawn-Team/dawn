@@ -18,7 +18,7 @@
 
 package com.arvinsichuan.thewhitesail.users.entity;
 
-import com.arvinsichuan.general.PmhConfigurations;
+import com.arvinsichuan.dawn.pmh.filemanagement.entity.FileUploadRecord;
 import com.arvinsichuan.thewhitesail.articles.entity.Article;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
@@ -59,6 +59,10 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "articleUser", cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<Article> articles;
+
+    @OneToMany(mappedBy = "uploadUser", cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private List<FileUploadRecord> fileUploadRecords;
 
     public User() {
     }
@@ -102,6 +106,14 @@ public class User implements Serializable {
 
     public void setArticles(List<Article> articles) {
         this.articles = articles;
+    }
+
+    public List<FileUploadRecord> getFileUploadRecords() {
+        return fileUploadRecords;
+    }
+
+    public void setFileUploadRecords(List<FileUploadRecord> fileUploadRecords) {
+        this.fileUploadRecords = fileUploadRecords;
     }
 
     public User(String username, String password, Boolean enabled, List<Authority> authorities, List<Article>

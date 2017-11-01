@@ -30,13 +30,13 @@ package com.arvinsichuan.general;
  * @author ArvinSiChuan
  */
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
 @Service
 
+@PropertySource("classpath:config/pmh.properties")
 @ConfigurationProperties("com.arvinsichuan.dawn")
 public class PmhConfigurations {
 //    *************** DEMO ********************
@@ -49,4 +49,13 @@ public class PmhConfigurations {
 //    public void setSchemaName(String schemaName) {
 //        this.schemaName = schemaName;
 //    }
+    private String uploadUrl;
+
+    public String getUploadUrl() {
+        return uploadUrl;
+    }
+
+    public void setUploadUrl(String uploadUrl) {
+        this.uploadUrl = uploadUrl;
+    }
 }
