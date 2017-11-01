@@ -151,11 +151,9 @@ public class PriorityQueueSchedulePlannerImpl implements SchedulePlanner {
                 priorityQueue.forEach(mission -> {
                     System.out.println(mission.getMissionUuid().toString() + mission.getStatus());
                 });
-                System.out.println("--------------------------------------------------------------");
                 cachedPreRequisitionQueue.forEach(mission -> {
                     System.out.println(mission.getMissionUuid().toString() + mission.getStatus());
                 });
-                System.out.println("***********************  DEBUGGING  **************************");
                 Thread.sleep(heartPause);
             } catch (InterruptedException e) {
                 e.printStackTrace();
