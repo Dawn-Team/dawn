@@ -18,6 +18,7 @@
 
 package com.arvinsichuan.dawn.pmh.projectmanagement.controller;
 
+import com.arvinsichuan.dawn.pmh.datasource.entities.DatasourceEntity;
 import com.arvinsichuan.dawn.pmh.projectmanagement.service.DPPProjectManager;
 import com.arvinsichuan.dawn.pmh.projectmanagement.service.DPPProjectService;
 import com.arvinsichuan.general.WebInfoEntity;
@@ -26,6 +27,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Project PancakeofMountHuang
@@ -55,43 +57,56 @@ public class DPPProjectController {
         return webInfoEntity;
     }
 
+    @RequestMapping(value = "/getData", method = RequestMethod.POST)
+    public WebInfoEntity getDatasourceList(String projectToken) {
+        WebInfoEntity webInfoEntity = new WebInfoEntity();
+        List<DatasourceEntity> dataSourceList = dppProjectManager.getDataSourceList();
+        webInfoEntity
+                .isOK()
+                .addInfoAndData("projectToken",projectToken)
+                .addInfoAndData("DSList",dataSourceList);
+        return webInfoEntity;
+    }
 
-    public WebInfoEntity getDatasourceList() {
+    @RequestMapping(value = "/setAlias", method = RequestMethod.POST)
+    public WebInfoEntity setProjectAlias(String alias,String projectToken) {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
 
         return webInfoEntity;
     }
 
-    public WebInfoEntity setProjectAlias(String alias) {
+    @RequestMapping(value = "/getCubLevelNames", method = RequestMethod.POST)
+    public WebInfoEntity getCubeLevelNames(String projectToken) {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
 
         return webInfoEntity;
     }
 
-    public WebInfoEntity getCubeLevelNames() {
+    @RequestMapping(value = "/getSquareLevelNames", method = RequestMethod.POST)
+    public WebInfoEntity getSquareLevelNames(String cubeLevelName,String projectToken) {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
 
         return webInfoEntity;
     }
 
-    public WebInfoEntity getSquareLevelNames(String cubeLevelName) {
+    @RequestMapping(value = "/getAllProcess", method = RequestMethod.POST)
+    public WebInfoEntity getAllProcessMethod(String projectToken) {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
 
         return webInfoEntity;
     }
 
-    public WebInfoEntity getAllProcessMethod() {
+    @RequestMapping(value = "/setProcessMethod", method = RequestMethod.POST)
+    public WebInfoEntity setProcessMethod(String methodName,String projectToken) {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
 
         return webInfoEntity;
     }
 
-
-    public WebInfoEntity setProcessMethod(String methodName) {
+    @RequestMapping(value = "/commitMission", method = RequestMethod.POST)
+    public WebInfoEntity commitMission(String projectToken){
         WebInfoEntity webInfoEntity = new WebInfoEntity();
 
         return webInfoEntity;
     }
-
-
 }
