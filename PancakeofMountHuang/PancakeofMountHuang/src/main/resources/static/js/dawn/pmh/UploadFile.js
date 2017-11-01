@@ -15,43 +15,48 @@
  */
 import Security from '../../theWhiteSail/Security.js'
 
-const STEP1_TEMPLATE ='<form id=\"uploadform\" enctype=\"multipart/form-data\">\n' +
-    '    <input type=\"file\" id=\"myBlogImage\" name=\"myfiles\"class="btn btn-default"  />\n '+
-    '    <br><input type=\"submit\" id=\"upload\" value=\"上传\" class="btn btn-primary" />\n' +
+const STEP1_TEMPLATE =
+    '<form id="uploadform" class="form-group" enctype="multipart/form-data">' +
+    '    <label for="upload_ds" class="btn btn-default">Choose A File From Disk</label>' +
+    '    <input id="upload_ds" type="file" name="myfiles" style="display: none;" />' +
+    '    <input type="submit" id="upload" value="Upload" class="btn btn-primary" />' +
     '</form>';
 
-export default class UploadFile{
+export default class UploadFile {
 
-    constructor(){}
-
-    onNewUpload(){
-        let csrfToken = Security.getCSRFToken();
-        $("div[data-toggle='newPreprocessProject']").find(".panel-body").html(STEP1_TEMPLATE);
-        $("#uploadform").submit(function () {
-            let  formData = new FormData($(this)[0]);
-            $.ajax({
-                //处理文件上传操作的服务器端地址(可以传参数,已亲测可用)http://localhost:8080
-                url: '/fileUpload/upload',
-                type: 'PUT',
-                headers: csrfToken,
-                data: formData,
-                async: true,
-                cache: true,
-                contentType: false,
-                processData: false,
-                success: function () {            //服务器响应成功时的处理函数
-                    alert("上传成功!");
-                },
-                error: function () { //服务器响应失败时的处理函数
-                    alert("上传失败!");
-                }
-            });
-            return false;
-        }
-    );
+    constructor() {
     }
 
-    onUpload(formData){
+    onNewUpload(container,recallFunc) {
+        let csrfToken = Security.getCSRFToken();
+        container.html(STEP1_TEMPLATE);
+        //TODO multi upload instance condition. @Ash
+        $("#uploadform").submit(function () {
+                let formData = new FormData($(this)[0]);
+                $.ajax({
+                    //处理文件上传操作的服务器端地址(可以传参数,已亲测可用)http://localhost:8080
+                    url: '/fileUpload/upload',
+                    type: 'PUT',
+                    headers: csrfToken,
+                    data: formData,
+                    async: true,
+                    cache: true,
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {            //服务器响应成功时的处理函数
+                        alert("上传成功!");
+                        recallFunc(data);
+                    },
+                    error: function () { //服务器响应失败时的处理函数
+                        alert("上传失败!");
+                    }
+                });
+                return false;
+            }
+        );
+    }
+
+    onUpload(formData) {
 
     }
 
