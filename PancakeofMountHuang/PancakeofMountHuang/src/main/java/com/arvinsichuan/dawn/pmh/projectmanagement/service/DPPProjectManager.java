@@ -106,4 +106,7 @@ public class DPPProjectManager {
         return service;
     }
 
+    public DPPProjectService retrieveProjectByUUID(UUID uuid) {
+        return services.get(uuid);
+    }
 }
