@@ -3,6 +3,7 @@ package com.arvinsichuan.dawn.pmh.datacleaning.impl;
 import com.arvinsichuan.dawn.pmh.datacleaning.DataPreProcessor;
 import com.arvinsichuan.dawn.pmh.datasource.DataSourceCube;
 import com.arvinsichuan.general.scheduleplanner.AbstractAtomMission;
+import com.arvinsichuan.general.scheduleplanner.MissionStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -23,7 +24,9 @@ public class AverageDataPreProcessor extends AbstractAtomMission implements Data
 
     @Override
     public void run() {
+        setStatus(MissionStatus.RUNNING);
         this.setDataSourceCube(cleanDataSource());
+        setStatus(MissionStatus.FINISHED);
     }
 
     public DataSourceCube getDataSourceCube() {
