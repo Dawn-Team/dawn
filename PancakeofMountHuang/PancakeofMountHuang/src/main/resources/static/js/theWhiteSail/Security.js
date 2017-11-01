@@ -16,7 +16,7 @@
 
 import Util from "./Util.js";
 
-const logoutURL="/auth/logout";
+const logoutURL = "/auth/logout";
 
 export default class Security {
 
@@ -51,11 +51,11 @@ export default class Security {
                 password: password
             },
             success: function (data) {
-                Util.wrapWebInfo(data, recall_fun);
+                recall_fun(Util.wrapWebInfo(data));
             },
             error: function (data) {
                 Security.ajaxError(data);
-                Util.wrapWebInfo(data, recall_fun);
+                recall_fun(Util.wrapWebInfo(data));
             }
         })
     }

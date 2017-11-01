@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 export default class Util {
-    static wrapWebInfo(webInfo, recall_fun) {
+    static wrapWebInfo(webInfo) {
         let info = {};
         try {
             info["status"] = webInfo.status;
@@ -23,7 +23,7 @@ export default class Util {
         } catch (e) {
             console.log(e)
         }
-        recall_fun(info)
+        return info;
     }
 
     static setDraggable(beDraggedOb,sortableOb,containmentOb ){

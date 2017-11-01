@@ -16,8 +16,10 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 import UploadFile from "./UploadFile.js";
+import Util from "../../theWhiteSail/Util.js";
+import Security from "../../theWhiteSail/Security.js";
 
-const ARTICLE_TEMPLATE =
+const PANEL_TEMPLATE =
     '<div class="row" data-toggle="newPreprocessProject"  style="display: none;">' +
     '   <div class="col-sm-12">' +
     '       <div class="panel panel-default">' +
@@ -103,6 +105,24 @@ export default class PreProcessProject {
     constructor() {
         this._multitaskThreshold = 1;
         this._onCreatingOb = $("div[data-toggle='newPreprocessProject']");
+        this._generateProjectUrl = "/dataPreProcess/new"
+    }
+
+    _generateAProject(recallFun) {
+        let csrfHeader=Security.getCSRFToken();
+        $.ajax({
+            url: this._generateProjectUrl,
+            type: 'POST',
+            async: true,
+            headers: csrfHeader,
+            success: function (data) {
+                recallFun(Util.wrapWebInfo(data));
+            },
+            error: function (data) {
+                //todo
+                console.log(data)
+            }
+        });
     }
 
 
@@ -113,21 +133,21 @@ export default class PreProcessProject {
         if (isFullyAuthOb === undefined || isFullyAuthOb.text() !== 'fullyAuthenticated') {
             return "auth insufficient";
         } else if (onCreateFlag < this._multitaskThreshold) {
-            mainColOb.find("div:first").before(ARTICLE_TEMPLATE);
+            mainColOb.find("div:first").before(PANEL_TEMPLATE);
+            this._generateAProject(function (data) {
+                let uuid=data.full.projectToken;
+                mainColOb.find("input[data-role='title']").val(uuid);
+            });
             mainColOb.find("div[role='toolbar']").html(SEND_ICO + SAVE_ICO + DROP_ICO);
             mainColOb.find("div[data-toggle='newPreprocessProject']").fadeIn("3000");
             this._onCreatingOb = $("div[data-toggle='newPreprocessProject']");
             this._onCreatingOb.find(".panel-body").html(TEMP_TEMPLATE);
             let container = this._onCreatingOb.find("div[data-id='DSUploadComponent']");
-            console.log("*******************************");
-            console.log(container);
             new UploadFile().onNewUpload(container, function (data) {
                 thisObject._onFileUploadSuccess(data);
             });
-
             this._onCreatingOb.find("a[name='send']").addClass("disabled");
             this._onCreatingOb.find("a[name='save']").addClass("disabled");
-
             onCreateFlag++;
         } else {
             this._onCreatingOb.click();

@@ -38,6 +38,7 @@ import javax.annotation.Resource;
 public class DPPResultsPersistenceAtomMission extends AbstractAtomMission {
 
     private static final long serialVersionUID = -6996386206762480833L;
+
     @Resource(name = "DPPResultsDocsRepo")
     private DPPResultsDocumentsRepo dppResultsDocumentsRepo;
 

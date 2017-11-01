@@ -21,6 +21,7 @@ package com.arvinsichuan.dawn.pmh.projectmanagement.service;
 import com.arvinsichuan.dawn.pmh.datasource.entities.DatasourceEntity;
 import com.arvinsichuan.dawn.pmh.datasource.repositories.DatasourceRepository;
 import com.arvinsichuan.general.auth.SecurityInfo;
+import com.arvinsichuan.general.exceptions.EmptyDataException;
 import com.arvinsichuan.general.scheduleplanner.AbstractAtomMission;
 import com.arvinsichuan.general.scheduleplanner.MissionStatus;
 import com.arvinsichuan.general.scheduleplanner.SchedulePlanner;
@@ -106,7 +107,11 @@ public class DPPProjectManager {
         return service;
     }
 
-    public DPPProjectService retrieveProjectByUUID(UUID uuid) {
-        return services.get(uuid);
+    public DPPProjectService retrieveProjectByUUID(UUID uuid) throws EmptyDataException {
+        DPPProjectService dppProjectService= services.get(uuid);
+        if (dppProjectService==null){
+            throw new EmptyDataException("No Project found with uuid: "+uuid);
+        }
+        return dppProjectService;
     }
 }

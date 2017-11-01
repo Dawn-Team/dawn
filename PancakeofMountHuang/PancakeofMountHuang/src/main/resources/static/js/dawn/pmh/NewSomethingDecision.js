@@ -27,6 +27,7 @@ const HEADER_TEMPLATE =
 const DECISION_TEMPLATE =
     '<div class="col-sm-12">' +
     '   <input id="newArticle" type="button" class="btn btn-default form-control" value="New Article"/>' +
+    '   <br />' +
     '   <input id="newPreprocessProject" type="button" class="btn btn-default form-control" value="New Data Preprocess Project"/>' +
     '</div>';
 

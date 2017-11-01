@@ -18,15 +18,14 @@
 
 package com.arvinsichuan.dawn.pmh.projectmanagement.controller;
 
-import com.arvinsichuan.dawn.pmh.datasource.entities.DatasourceEntity;
+import com.arvinsichuan.dawn.pmh.datacleaning.DataPreProcessor;
 import com.arvinsichuan.dawn.pmh.projectmanagement.exceptions.ConfigurationInvalidException;
 import com.arvinsichuan.dawn.pmh.projectmanagement.service.DPPProjectManager;
 import com.arvinsichuan.dawn.pmh.projectmanagement.service.DPPProjectService;
 import com.arvinsichuan.general.WebInfoEntity;
 import com.arvinsichuan.general.exceptions.EmptyDataException;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -51,6 +50,7 @@ public class DPPProjectController {
     private DPPProjectManager dppProjectManager;
 
     @RequestMapping(value = "/new", method = RequestMethod.POST)
+    @PreAuthorize("hasRole('ROLE_USER')")
     public WebInfoEntity generateADPPProject() {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
         DPPProjectService dppProjectService = dppProjectManager.generateAProject();
@@ -60,39 +60,40 @@ public class DPPProjectController {
         return webInfoEntity;
     }
 
-    @RequestMapping(value = "/getData", method = RequestMethod.POST)
-    public WebInfoEntity getDatasourceList(UUID projectToken) {
+
+    @RequestMapping(value = "/{uuid}/alias", method = RequestMethod.POST)
+    @PreAuthorize("hasRole('ROLE_USER')")
+    public WebInfoEntity setProjectAlias(@PathVariable("uuid") UUID projectToken,
+                                         @RequestParam(required = false) String alias) {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
-        List<DatasourceEntity> dataSourceList = dppProjectManager.getDataSourceList();
-        webInfoEntity
-                .isOK()
-                .addInfoAndData("projectToken",projectToken)
-                .addInfoAndData("DSList",dataSourceList);
+        DPPProjectService dppProjectService = null;
+        try {
+            dppProjectService = dppProjectManager.retrieveProjectByUUID(projectToken);
+            if (alias != null && !alias.isEmpty()) {
+                dppProjectService.setProjectAlias(alias);
+            }
+            webInfoEntity
+                    .isOK()
+                    .addInfoAndData("projectToken", projectToken)
+                    .addInfoAndData("alias", dppProjectService.getProjectAlias());
+        } catch (EmptyDataException e) {
+            e.printStackTrace();
+            webInfoEntity.haveException(e);
+        }
         return webInfoEntity;
     }
 
-    @RequestMapping(value = "/setAlias", method = RequestMethod.POST)
-    public WebInfoEntity setProjectAlias(String alias,UUID projectToken) {
+    @RequestMapping(value = "/{uuid}/cubLevelNames", method = RequestMethod.POST)
+    public WebInfoEntity getCubeLevelNames(@PathVariable("uuid") UUID projectToken) {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
-        DPPProjectService dppProjectService = dppProjectManager.retrieveProjectByUUID(projectToken);
-        dppProjectService.setProjectAlias(alias);
-        webInfoEntity
-                .isOK()
-                .addInfoAndData("projectToken",projectToken);
-        return webInfoEntity;
-    }
-
-    @RequestMapping(value = "/getCubLevelNames", method = RequestMethod.POST)
-    public WebInfoEntity getCubeLevelNames(UUID projectToken)  {
-        WebInfoEntity webInfoEntity = new WebInfoEntity();
-        DPPProjectService dppProjectService = dppProjectManager.retrieveProjectByUUID(projectToken);
         List<String> cubeLevelNames = null;
         try {
+            DPPProjectService dppProjectService = dppProjectManager.retrieveProjectByUUID(projectToken);
             cubeLevelNames = dppProjectService.getCubeLevelNames();
             webInfoEntity
                     .isOK()
-                    .addInfoAndData("projectToken",projectToken)
-                    .addInfoAndData("cubeLevelNames",cubeLevelNames);
+                    .addInfoAndData("projectToken", projectToken)
+                    .addInfoAndData("cubeLevelNames", cubeLevelNames);
         } catch (ConfigurationInvalidException | EmptyDataException e) {
             e.printStackTrace();
             webInfoEntity.haveException(e);
@@ -100,16 +101,22 @@ public class DPPProjectController {
         return webInfoEntity;
     }
 
-    @RequestMapping(value = "/getSquareLevelNames", method = RequestMethod.POST)
-    public WebInfoEntity getSquareLevelNames(String cubeLevelName,UUID projectToken) {
+    @RequestMapping(value = "/{uuid}/squareLevelNames", method = RequestMethod.POST)
+    @PreAuthorize("hasRole('ROLE_USER')")
+    public WebInfoEntity getSquareLevelNames(@PathVariable("uuid") UUID projectToken, @RequestParam(required = false)
+            String
+            cubeLevelName) {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
-        DPPProjectService dppProjectService = dppProjectManager.retrieveProjectByUUID(projectToken);
         try {
-            List squareLevelNames =dppProjectService.getSquareLevelNamesOfSheetName(cubeLevelName);
+            DPPProjectService dppProjectService = dppProjectManager.retrieveProjectByUUID(projectToken);
             webInfoEntity
                     .isOK()
-                    .addInfoAndData("projectToken",projectToken)
-                    .addInfoAndData("squareLevelNames",squareLevelNames);
+                    .addInfoAndData("projectToken", projectToken)
+                    .addInfoAndData("squareLevelNames", dppProjectService.getSquareLevelNames());
+            if (cubeLevelName != null && !cubeLevelName.isEmpty()) {
+                List squareLevelNames = dppProjectService.getSquareLevelNamesOfSheetName(cubeLevelName);
+                webInfoEntity.addInfoAndData("squareLevelNames", squareLevelNames);
+            }
         } catch (ConfigurationInvalidException | EmptyDataException e) {
             e.printStackTrace();
             webInfoEntity.haveException(e);
@@ -117,23 +124,38 @@ public class DPPProjectController {
         return webInfoEntity;
     }
 
-    @RequestMapping(value = "/getAllProcess", method = RequestMethod.POST)
-    public WebInfoEntity getAllProcessMethod(UUID projectToken) {
+    @RequestMapping(value = "/{uuid}/allProcessor", method = RequestMethod.POST)
+    @PreAuthorize("hasRole('ROLE_USER')")
+    public WebInfoEntity getAllProcessMethod(@PathVariable("uuid") UUID projectToken) {
+        WebInfoEntity webInfoEntity = new WebInfoEntity();
+        webInfoEntity
+                .isOK()
+                .addInfoAndData("allPreprocessor", DataPreProcessor.preProcessBeanMap.values());
+        return webInfoEntity;
+    }
+
+    @RequestMapping(value = "/{uuid}/processMethod", method = RequestMethod.POST)
+    @PreAuthorize("hasRole('ROLE_USER')")
+    public WebInfoEntity setProcessMethod(@PathVariable("uuid") UUID projectToken,
+                                          @RequestParam(required = false, value = "methodName") String methodName) {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
 
         return webInfoEntity;
     }
 
-    @RequestMapping(value = "/setProcessMethod", method = RequestMethod.POST)
-    public WebInfoEntity setProcessMethod(String methodName,UUID projectToken) {
+    @RequestMapping(value = "/{uuid}/commit", method = RequestMethod.POST)
+    @PreAuthorize("hasRole('ROLE_USER')")
+    public WebInfoEntity commitMission(@PathVariable("uuid") UUID projectToken) {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
 
         return webInfoEntity;
     }
 
-    @RequestMapping(value = "/commitMission", method = RequestMethod.POST)
-    public WebInfoEntity commitMission(UUID projectToken){
+    @RequestMapping(value = "/{uuid}/status", method = RequestMethod.POST)
+    @PreAuthorize("hasRole('ROLE_USER')")
+    public WebInfoEntity lookUpMissionStatus() {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
+
 
         return webInfoEntity;
     }

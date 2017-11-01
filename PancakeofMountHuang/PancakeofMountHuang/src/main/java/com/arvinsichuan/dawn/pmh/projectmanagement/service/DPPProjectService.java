@@ -75,6 +75,11 @@ public class DPPProjectService {
         return this;
     }
 
+    public String getProjectAlias(){
+        return dppProjectEntity.getAlias();
+    }
+
+
     public DPPProjectService setDataSourceEntity(DatasourceEntity dataSourceEntity) throws
             DataSourceTypeInvalidException, InvalidFormatException, IOException, ParametersNotFoundException {
         this.datasourceEntity = dataSourceEntity;
