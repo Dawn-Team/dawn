@@ -16,17 +16,21 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.arvinsichuan.thewhitesail.users.entity;
+package com.arvinsichuan.general.users.repository;
+
+import com.arvinsichuan.general.users.entity.User;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  * Project theWhiteSail
  * <p>
  * Author: arvinsc@foxmail.com
  * <p>
- * Date: 2017/10/1
+ * Date: 2017/9/28
  * <p>
- * Package: com.arvinsichuan.users.entity
+ * Package: com.arvinsichuan.users.repository
  */
-public enum AuthoritiesEnum {
-    ROLE_ANONYMOUS,ROLE_USER
+@Repository("userRepository")
+public interface UserRepository extends PagingAndSortingRepository<User,String> {
 }

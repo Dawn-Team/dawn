@@ -16,21 +16,21 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.arvinsichuan.thewhitesail.users.repository;
+package com.arvinsichuan.general.users.entity;
 
-import com.arvinsichuan.thewhitesail.users.entity.User;
-import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.stereotype.Repository;
+import java.io.Serializable;
 
 /**
  * Project theWhiteSail
  * <p>
  * Author: arvinsc@foxmail.com
  * <p>
- * Date: 2017/9/28
+ * Date: 2017/10/1
  * <p>
- * Package: com.arvinsichuan.users.repository
+ * Package: com.arvinsichuan.users.entity
  */
-@Repository("userRepository")
-public interface UserRepository extends PagingAndSortingRepository<User,String> {
+public class AuthorityKey implements Serializable{
+    private static final long serialVersionUID = -5670090268821107063L;
+    private User userByUsername;
+    private AuthoritiesEnum authority;
 }

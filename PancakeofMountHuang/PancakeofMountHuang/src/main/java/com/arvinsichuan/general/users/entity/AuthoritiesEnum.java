@@ -16,12 +16,7 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.arvinsichuan.thewhitesail.users.repository;
-
-
-import com.arvinsichuan.thewhitesail.users.entity.Authority;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+package com.arvinsichuan.general.users.entity;
 
 /**
  * Project theWhiteSail
@@ -30,8 +25,8 @@ import org.springframework.stereotype.Repository;
  * <p>
  * Date: 2017/10/1
  * <p>
- * Package: com.arvinsichuan.users.repository
+ * Package: com.arvinsichuan.users.entity
  */
-@Repository
-public interface AuthoritiesRepository extends CrudRepository<Authority,String> {
+public enum AuthoritiesEnum {
+    ROLE_ANONYMOUS,ROLE_USER
 }

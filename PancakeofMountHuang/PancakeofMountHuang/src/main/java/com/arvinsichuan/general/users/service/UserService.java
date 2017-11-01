@@ -16,15 +16,15 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.arvinsichuan.thewhitesail.users.service;
+package com.arvinsichuan.general.users.service;
 
 
 import com.arvinsichuan.general.WebInfoEntity;
 import com.arvinsichuan.general.exceptions.DuplicatedDataException;
-import com.arvinsichuan.thewhitesail.users.entity.AuthoritiesEnum;
-import com.arvinsichuan.thewhitesail.users.entity.Authority;
-import com.arvinsichuan.thewhitesail.users.entity.User;
-import com.arvinsichuan.thewhitesail.users.repository.UserRepository;
+import com.arvinsichuan.general.users.entity.AuthoritiesEnum;
+import com.arvinsichuan.general.users.entity.Authority;
+import com.arvinsichuan.general.users.entity.User;
+import com.arvinsichuan.general.users.repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

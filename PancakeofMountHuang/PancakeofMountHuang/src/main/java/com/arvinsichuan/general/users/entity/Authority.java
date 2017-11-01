@@ -16,9 +16,8 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.arvinsichuan.thewhitesail.users.entity;
+package com.arvinsichuan.general.users.entity;
 
-import com.arvinsichuan.general.PmhConfigurations;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;

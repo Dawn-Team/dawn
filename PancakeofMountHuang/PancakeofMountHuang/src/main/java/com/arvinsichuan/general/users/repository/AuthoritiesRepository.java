@@ -16,9 +16,12 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.arvinsichuan.thewhitesail.users.entity;
+package com.arvinsichuan.general.users.repository;
 
-import java.io.Serializable;
+
+import com.arvinsichuan.general.users.entity.Authority;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  * Project theWhiteSail
@@ -27,10 +30,8 @@ import java.io.Serializable;
  * <p>
  * Date: 2017/10/1
  * <p>
- * Package: com.arvinsichuan.users.entity
+ * Package: com.arvinsichuan.users.repository
  */
-public class AuthorityKey implements Serializable{
-    private static final long serialVersionUID = -5670090268821107063L;
-    private User userByUsername;
-    private AuthoritiesEnum authority;
+@Repository
+public interface AuthoritiesRepository extends CrudRepository<Authority,String> {
 }

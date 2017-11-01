@@ -16,11 +16,10 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.arvinsichuan.thewhitesail.auth;
+package com.arvinsichuan.general.auth;
 
 
-
-import com.arvinsichuan.thewhitesail.users.entity.AuthoritiesEnum;
+import com.arvinsichuan.general.users.entity.AuthoritiesEnum;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -38,6 +37,7 @@ import java.util.stream.Collectors;
  * Date: 2017/10/1
  * <p>
  * Package: com.arvinsichuan.auth
+ *
  * @author ArvinSiChuan
  */
 public class SecurityInfo {
@@ -59,7 +59,17 @@ public class SecurityInfo {
     }
 
 
-    static AuthoritiesEnum getTopAuth() {
+    public static String getUsername() {
+        if (getUserDetails() != null) {
+            return getUserDetails().getUsername();
+        } else if (getPrincipal() != null) {
+            return getPrincipal().getName();
+        } else {
+            return "anonymous";
+        }
+    }
+
+    public static AuthoritiesEnum getTopAuth() {
         Iterator iterator = SecurityContextHolder.getContext().getAuthentication().getAuthorities().iterator();
         List<AuthoritiesEnum> authorities = new ArrayList<>();
         while (iterator.hasNext()) {

@@ -16,13 +16,19 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.arvinsichuan.thewhitesail.auth;
+package com.arvinsichuan.general.users.controller;
+
+
 
 import com.arvinsichuan.general.WebInfoEntity;
+import com.arvinsichuan.general.exceptions.DuplicatedDataException;
+import com.arvinsichuan.general.users.service.UserService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.io.Serializable;
 
 /**
@@ -30,28 +36,28 @@ import java.io.Serializable;
  * <p>
  * Author: arvinsc@foxmail.com
  * <p>
- * Date: 2017/10/1
+ * Date: 2017/9/28
  * <p>
- * Package: com.arvinsichuan.auth
- * @author ArvinSiChuan
+ * Package: com.arvinsichuan.users.controller
  */
 @RestController
-@RequestMapping(path = "/auth")
-public class LogStatusController {
+@RequestMapping(path = "/users")
+public class UserController {
 
-    @RequestMapping(path = "/status", method = RequestMethod.POST)
-    public Serializable getLoginStatus() {
-        WebInfoEntity info = new WebInfoEntity();
-        info.isOK();
-        info.addInfoAndData("loginStatus", SecurityInfo.getTopAuth());
-        info.addInfoAndData("roleCode", SecurityInfo.getTopAuth().ordinal());
-        return info;
+    @Resource(name = "userService")
+    private
+    UserService userService;
+
+    @RequestMapping(path = "/signUp", method = RequestMethod.POST)
+    public Serializable signUp(@RequestParam(value = "username") String name, @RequestParam(value =
+            "password") String password) {
+        WebInfoEntity webInfoEntity=new WebInfoEntity();
+        try {
+            webInfoEntity= userService.userSignUp(name,password);
+        } catch (DuplicatedDataException e) {
+            webInfoEntity.haveException(e);
+        }
+        return webInfoEntity;
     }
 
-    @RequestMapping(path = "/login",method = RequestMethod.GET)
-    public Serializable loginPageInfo(){
-        WebInfoEntity info = (WebInfoEntity) getLoginStatus();
-        info.addInfoAndData("login page","/auth/login");
-        return info;
-    }
 }

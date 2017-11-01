@@ -16,7 +16,7 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.arvinsichuan.thewhitesail.users.entity;
+package com.arvinsichuan.general.users.entity;
 
 import com.arvinsichuan.dawn.pmh.filemanagement.entity.FileUploadRecord;
 import com.arvinsichuan.thewhitesail.articles.entity.Article;
@@ -63,6 +63,7 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "uploadUser", cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<FileUploadRecord> fileUploadRecords;
+
 
     public User() {
     }
