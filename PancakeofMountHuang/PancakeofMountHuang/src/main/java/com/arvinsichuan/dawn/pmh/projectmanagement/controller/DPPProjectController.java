@@ -19,15 +19,18 @@
 package com.arvinsichuan.dawn.pmh.projectmanagement.controller;
 
 import com.arvinsichuan.dawn.pmh.datasource.entities.DatasourceEntity;
+import com.arvinsichuan.dawn.pmh.projectmanagement.exceptions.ConfigurationInvalidException;
 import com.arvinsichuan.dawn.pmh.projectmanagement.service.DPPProjectManager;
 import com.arvinsichuan.dawn.pmh.projectmanagement.service.DPPProjectService;
 import com.arvinsichuan.general.WebInfoEntity;
+import com.arvinsichuan.general.exceptions.EmptyDataException;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Project PancakeofMountHuang
@@ -53,12 +56,12 @@ public class DPPProjectController {
         DPPProjectService dppProjectService = dppProjectManager.generateAProject();
         webInfoEntity
                 .isOK()
-                .addInfoAndData("projectToken", dppProjectService.getUuid().toString());
+                .addInfoAndData("projectToken", dppProjectService.getUuid());
         return webInfoEntity;
     }
 
     @RequestMapping(value = "/getData", method = RequestMethod.POST)
-    public WebInfoEntity getDatasourceList(String projectToken) {
+    public WebInfoEntity getDatasourceList(UUID projectToken) {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
         List<DatasourceEntity> dataSourceList = dppProjectManager.getDataSourceList();
         webInfoEntity
@@ -69,42 +72,67 @@ public class DPPProjectController {
     }
 
     @RequestMapping(value = "/setAlias", method = RequestMethod.POST)
-    public WebInfoEntity setProjectAlias(String alias,String projectToken) {
+    public WebInfoEntity setProjectAlias(String alias,UUID projectToken) {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
-
+        DPPProjectService dppProjectService = dppProjectManager.retrieveProjectByUUID(projectToken);
+        dppProjectService.setProjectAlias(alias);
+        webInfoEntity
+                .isOK()
+                .addInfoAndData("projectToken",projectToken);
         return webInfoEntity;
     }
 
     @RequestMapping(value = "/getCubLevelNames", method = RequestMethod.POST)
-    public WebInfoEntity getCubeLevelNames(String projectToken) {
+    public WebInfoEntity getCubeLevelNames(UUID projectToken)  {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
-
+        DPPProjectService dppProjectService = dppProjectManager.retrieveProjectByUUID(projectToken);
+        List<String> cubeLevelNames = null;
+        try {
+            cubeLevelNames = dppProjectService.getCubeLevelNames();
+            webInfoEntity
+                    .isOK()
+                    .addInfoAndData("projectToken",projectToken)
+                    .addInfoAndData("cubeLevelNames",cubeLevelNames);
+        } catch (ConfigurationInvalidException | EmptyDataException e) {
+            e.printStackTrace();
+            webInfoEntity.haveException(e);
+        }
         return webInfoEntity;
     }
 
     @RequestMapping(value = "/getSquareLevelNames", method = RequestMethod.POST)
-    public WebInfoEntity getSquareLevelNames(String cubeLevelName,String projectToken) {
+    public WebInfoEntity getSquareLevelNames(String cubeLevelName,UUID projectToken) {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
-
+        DPPProjectService dppProjectService = dppProjectManager.retrieveProjectByUUID(projectToken);
+        try {
+            List squareLevelNames =dppProjectService.getSquareLevelNamesOfSheetName(cubeLevelName);
+            webInfoEntity
+                    .isOK()
+                    .addInfoAndData("projectToken",projectToken)
+                    .addInfoAndData("squareLevelNames",squareLevelNames);
+        } catch (ConfigurationInvalidException | EmptyDataException e) {
+            e.printStackTrace();
+            webInfoEntity.haveException(e);
+        }
         return webInfoEntity;
     }
 
     @RequestMapping(value = "/getAllProcess", method = RequestMethod.POST)
-    public WebInfoEntity getAllProcessMethod(String projectToken) {
+    public WebInfoEntity getAllProcessMethod(UUID projectToken) {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
 
         return webInfoEntity;
     }
 
     @RequestMapping(value = "/setProcessMethod", method = RequestMethod.POST)
-    public WebInfoEntity setProcessMethod(String methodName,String projectToken) {
+    public WebInfoEntity setProcessMethod(String methodName,UUID projectToken) {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
 
         return webInfoEntity;
     }
 
     @RequestMapping(value = "/commitMission", method = RequestMethod.POST)
-    public WebInfoEntity commitMission(String projectToken){
+    public WebInfoEntity commitMission(UUID projectToken){
         WebInfoEntity webInfoEntity = new WebInfoEntity();
 
         return webInfoEntity;
