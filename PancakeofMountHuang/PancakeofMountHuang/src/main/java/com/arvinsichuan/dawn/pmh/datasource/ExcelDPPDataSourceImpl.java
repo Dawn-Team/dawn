@@ -43,8 +43,6 @@ import java.util.TreeMap;
  *
  * @author ArvinSiChuan
  */
-@Service("excelDPPDataSource")
-@Scope("prototype")
 public class ExcelDPPDataSourceImpl implements DPPDatasource {
     public static final String EXCEL_FILE_PATH_PARA_NAME = "excelPath";
     private static final int TITLE_ROW_INDEX = 0;

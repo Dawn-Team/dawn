@@ -16,30 +16,22 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.arvinsichuan.general.scheduleplanner;
-
-import com.arvinsichuan.general.scheduleplanner.exceptions.PriorityStrategyInvalidException;
-
-import java.util.List;
+package com.arvinsichuan.general.scheduleplanner.exceptions;
 
 /**
  * Project PancakeofMountHuang
  * <p>
  * Author: arvinsc@foxmail.com
  * <p>
- * Date: 31-Oct-17
+ * Date: 01-Nov-17
  * <p>
- * Package: com.arvinsichuan.general.scheduleplanner
+ * Package: com.arvinsichuan.general.scheduleplanner.exceptions
  *
  * @author ArvinSiChuan
  */
-public interface SchedulePlanner extends Runnable {
+public class InvalidAtomMissionInstanceException extends Exception {
 
-
-    public SchedulePlanner addAnAtomMission(AbstractAtomMission atomMission)
-            throws PriorityStrategyInvalidException;
-
-    public SchedulePlanner addABatchOfAtomMission(List<AbstractAtomMission> atomMissions)
-            throws PriorityStrategyInvalidException;
-
+    public InvalidAtomMissionInstanceException(String message) {
+        super("Instance should be of AbstractAtomMission but it is" + message);
+    }
 }

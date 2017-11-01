@@ -35,6 +35,7 @@ import java.util.UUID;
 public abstract class AbstractAtomMission implements Runnable, Serializable, Comparable {
 
     private UUID missionUuid = UUID.randomUUID();
+    private UUID batchUuid = null;
     private AbstractAtomMission preRequisition = null;
     private AbstractAtomMission postRequisition = null;
     private int priority = -1;
@@ -78,6 +79,14 @@ public abstract class AbstractAtomMission implements Runnable, Serializable, Com
 
     public void setStatus(MissionStatus status) {
         this.status = status;
+    }
+
+    public UUID getBatchUuid() {
+        return batchUuid;
+    }
+
+    public void setBatchUuid(UUID batchUuid) {
+        this.batchUuid = batchUuid;
     }
 
     @Override

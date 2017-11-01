@@ -37,7 +37,7 @@ import java.util.Queue;
  *
  * @author ArvinSiChuan
  */
-@Service("schedulePlanner")
+@Service("priorityQueueSchedulePlanner")
 public class PriorityQueueSchedulePlannerImpl implements SchedulePlanner {
 
     private static PriorityQueueSchedulePlannerImpl ourInstance = new PriorityQueueSchedulePlannerImpl();
@@ -100,6 +100,7 @@ public class PriorityQueueSchedulePlannerImpl implements SchedulePlanner {
             }
         }
     }
+
 
     @Override
     public void run() {

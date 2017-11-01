@@ -18,10 +18,12 @@
 
 package com.arvinsichuan.dawn.pmh.datasource.entities;
 
+import com.arvinsichuan.dawn.pmh.projectmanagement.entity.DPPProjectEntity;
 import com.arvinsichuan.general.users.entity.User;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -56,7 +58,7 @@ public class DatasourceEntity implements Serializable {
     @Column(name = "location", length = 255, nullable = false)
     private String location;
 
-    @Column(name = "status",nullable = false)
+    @Column(name = "status", nullable = false)
     @Enumerated(EnumType.STRING)
     private DSStatusEnum status;
 
@@ -65,8 +67,12 @@ public class DatasourceEntity implements Serializable {
             foreignKey = @ForeignKey(name = "fk_datasources_users"))
     private User relatedUser;
 
+    @OneToMany(mappedBy = "datasource")
+    private List<DPPProjectEntity> relatedProjects;
 
-    public DatasourceEntity(){}
+
+    public DatasourceEntity() {
+    }
 
     public DatasourceEntity(DSTypesEnum type, DSStageEnum stage, String location, DSStatusEnum status, User
             relatedUser) {
