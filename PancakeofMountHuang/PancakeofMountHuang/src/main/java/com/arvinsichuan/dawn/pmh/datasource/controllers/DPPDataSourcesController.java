@@ -22,7 +22,6 @@ import com.arvinsichuan.dawn.pmh.datasource.entities.DatasourceEntity;
 import com.arvinsichuan.dawn.pmh.datasource.services.DatasourceService;
 import com.arvinsichuan.dawn.pmh.filemanagement.entity.FileUploadRecord;
 import com.arvinsichuan.general.WebInfoEntity;
-import com.arvinsichuan.general.auth.SecurityInfo;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -53,7 +52,6 @@ public class DPPDataSourcesController {
     @PreAuthorize("hasRole('ROLE_USER')")
     public WebInfoEntity getUsersDataSourcesList() {
         WebInfoEntity webInfoEntity = new WebInfoEntity();
-        String username = SecurityInfo.getUsername();
         webInfoEntity
                 .isOK()
                 .addInfoAndData("datasourceList", datasourceService.getAllDatasource());
