@@ -19,8 +19,7 @@
 package com.arvinsichuan.thewhitesail.articles.entity;
 
 
-import com.arvinsichuan.general.PmhConfigurations;
-import com.arvinsichuan.thewhitesail.users.entity.User;
+import com.arvinsichuan.general.users.entity.User;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
