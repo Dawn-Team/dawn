@@ -2,6 +2,7 @@ package com.arvinsichuan.dawn.pmh.datacleaning.impl;
 
 import com.arvinsichuan.dawn.pmh.datacleaning.DataPreProcessor;
 import com.arvinsichuan.dawn.pmh.datasource.DataSourceCube;
+import com.arvinsichuan.general.scheduleplanner.AbstractAtomMission;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -11,14 +12,38 @@ import java.util.*;
     Time:2017/11/1 16:43
 */
 @Service("averageDataCleanMethod")
-public class AverageDataPreProcessor implements DataPreProcessor {
+public class AverageDataPreProcessor extends AbstractAtomMission implements DataPreProcessor {
+
+    private DataSourceCube dataSourceCube;
+    private Map param;
 
     public AverageDataPreProcessor() {
         preProcessBeanMap.put("average","averageDataCleanMethod");
     }
 
     @Override
-    public DataSourceCube cleanDataSource(DataSourceCube dataSourceCube, Map param) {
+    public void run() {
+        this.setDataSourceCube(cleanDataSource());
+    }
+
+    public DataSourceCube getDataSourceCube() {
+        return dataSourceCube;
+    }
+
+    public void setDataSourceCube(DataSourceCube dataSourceCube) {
+        this.dataSourceCube = dataSourceCube;
+    }
+
+    public Map getParam() {
+        return param;
+    }
+
+    public void setParam(Map param) {
+        this.param = param;
+    }
+
+    @Override
+    public DataSourceCube cleanDataSource() {
         for (Map<String, List> squareLevelNames:dataSourceCube.getCube()) {
             squareLevelNames = cleanSquareLevelNames(squareLevelNames);
         }
@@ -63,4 +88,5 @@ public class AverageDataPreProcessor implements DataPreProcessor {
         }
         return cubeLevelNames;
     }
+
 }

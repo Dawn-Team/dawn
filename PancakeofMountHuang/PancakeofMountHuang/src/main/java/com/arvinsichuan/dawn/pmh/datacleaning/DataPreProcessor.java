@@ -13,5 +13,5 @@ import java.util.TreeMap;
 public interface DataPreProcessor {
     public static Map<String,String> preProcessBeanMap = new TreeMap<>();
 
-    public DataSourceCube cleanDataSource(DataSourceCube dataSourceCube,Map param);
+    public DataSourceCube cleanDataSource();
 }
